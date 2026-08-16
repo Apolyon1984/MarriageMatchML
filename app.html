@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>SELECT — Démonstration de l'application</title>
+    <meta
+      name="description"
+      content="Maquette interactive de l'application SELECT : inscription, vérification, Choix SELECT, exploration, matchs et messagerie."
+    />
+    <meta name="theme-color" content="#100e0c" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23100e0c'/%3E%3Cpath d='M16 24c-4-3-7-5.6-7-9a4 4 0 017-2.6A4 4 0 0123 15c0 3.4-3 6-7 9z' fill='%23c8a44d'/%3E%3C/svg%3E"
+    />
+  </head>
+
+  <body class="app-body">
+    <!-- ============ Barre de démonstration (hors application) ============ -->
+    <div class="demo-bar">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#1a1613" stroke="#c8a44d" stroke-opacity=".5" />
+          <path d="M16 24c-4-3-7-5.6-7-9a4 4 0 017-2.6A4 4 0 0123 15c0 3.4-3 6-7 9z" fill="#c8a44d" />
+        </svg>
+        Select
+      </a>
+      <div class="demo-bar__actions">
+        <button class="btn btn--ghost-light btn--s" id="btnReset" type="button">
+          Recommencer
+        </button>
+        <a class="btn btn--ghost-light btn--s" href="index.html">Retour au site</a>
+      </div>
+    </div>
+
+    <!-- ============ Application ============ -->
+    <div class="device">
+      <div class="app">
+        <header class="app__header" id="appHeader" hidden>
+          <p class="app__title" id="appTitle">Découvrir</p>
+          <div class="app__header-actions">
+            <button class="icon-btn" id="btnFilters" type="button" aria-label="Filtres">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M3 6h14M6 10h8M8.5 14h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button class="icon-btn" id="btnPremium" type="button" aria-label="Premium">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3l2 4.5 4.8.4-3.6 3.2 1.1 4.7L10 13.4 5.7 15.8l1.1-4.7L3.2 7.9 8 7.5 10 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="app__body" id="appBody">
+          <!-- ---------- Accueil ---------- -->
+          <section class="screen is-active" id="screen-welcome">
+            <div class="welcome">
+              <a class="brand welcome__brand" href="index.html">
+                <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+                  <rect width="32" height="32" rx="9" fill="#1a1613" stroke="#c8a44d" stroke-opacity=".5" />
+                  <path d="M16 24c-4-3-7-5.6-7-9a4 4 0 017-2.6A4 4 0 0123 15c0 3.4-3 6-7 9z" fill="#c8a44d" />
+                </svg>
+                Select
+              </a>
+
+              <div class="welcome__content">
+                <p class="eyebrow eyebrow--light">Mali & diaspora</p>
+                <h1>Trouvez quelqu'un <em>de bien</em>.</h1>
+                <p>
+                  Des profils vérifiés, des intentions annoncées et une
+                  sélection travaillée chaque soir.
+                </p>
+
+                <div class="welcome__actions">
+                  <button class="btn btn--gold btn--block" data-action="start-signup" type="button">
+                    Créer mon profil
+                  </button>
+                  <button class="btn btn--ghost-light btn--block" data-action="quick-demo" type="button">
+                    Entrer directement dans la démo
+                  </button>
+                </div>
+
+                <p class="welcome__legal">
+                  Maquette de démonstration — profils et messages fictifs.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ---------- Inscription ---------- -->
+          <section class="screen" id="screen-onboarding">
+            <div class="onb">
+              <div class="onb__top">
+                <button class="icon-btn" id="onbBack" type="button" aria-label="Retour">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                    <path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="progress"><div class="progress__bar" id="onbProgress"></div></div>
+                <span class="muted" style="font-size: 12px" id="onbCount">1/6</span>
+              </div>
+
+              <!-- Étape 1 -->
+              <div class="onb__step is-active" data-step="1">
+                <h2>Faisons connaissance</h2>
+                <p class="onb__sub">Ces informations apparaîtront sur votre profil.</p>
+
+                <div class="field">
+                  <label for="fName">Prénom</label>
+                  <input id="fName" type="text" placeholder="Ex. Sory" autocomplete="given-name" />
+                </div>
+
+                <div class="field field--row">
+                  <div class="field" style="margin: 0">
+                    <label for="fAge">Âge</label>
+                    <input id="fAge" type="number" min="18" max="45" value="28" />
+                  </div>
+                  <div class="field" style="margin: 0">
+                    <label for="fCity">Ville</label>
+                    <select id="fCity"></select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="fJob">Profession</label>
+                  <input id="fJob" type="text" placeholder="Ex. Ingénieur" />
+                </div>
+
+                <p class="hint">
+                  Vous devez avoir 18 ans au minimum. L'âge est vérifié lors de
+                  la validation d'identité.
+                </p>
+
+                <div class="onb__actions">
+                  <button class="btn btn--gold btn--block" data-next type="button">Continuer</button>
+                </div>
+              </div>
+
+              <!-- Étape 2 -->
+              <div class="onb__step" data-step="2">
+                <h2>Vous êtes…</h2>
+                <p class="onb__sub">
+                  SELECT est une plateforme de rencontres femme-homme.
+                </p>
+
+                <div class="choice-grid" id="genderChoices">
+                  <button class="choice" data-gender="femme" type="button">
+                    <span class="choice__radio"></span>
+                    <span>
+                      <span class="choice__label">Une femme</span>
+                      <span class="choice__desc">Je souhaite rencontrer un homme</span>
+                    </span>
+                  </button>
+                  <button class="choice" data-gender="homme" type="button">
+                    <span class="choice__radio"></span>
+                    <span>
+                      <span class="choice__label">Un homme</span>
+                      <span class="choice__desc">Je souhaite rencontrer une femme</span>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="onb__actions">
+                  <button class="btn btn--gold btn--block" data-next type="button">Continuer</button>
+                </div>
+              </div>
+
+              <!-- Étape 3 -->
+              <div class="onb__step" data-step="3">
+                <h2>Que cherchez-vous ?</h2>
+                <p class="onb__sub">
+                  Votre intention sera visible sur votre profil. C'est ce qui
+                  évite les malentendus.
+                </p>
+                <div class="choice-grid" id="intentionChoices"></div>
+
+                <div class="onb__actions">
+                  <button class="btn btn--gold btn--block" data-next type="button">Continuer</button>
+                </div>
+              </div>
+
+              <!-- Étape 4 -->
+              <div class="onb__step" data-step="4">
+                <h2>Ce qui compte pour vous</h2>
+                <p class="onb__sub">Choisissez au moins trois valeurs ou passions.</p>
+                <div class="tag-cloud" id="valueCloud"></div>
+                <p class="hint" id="valueHint">0 sélectionnée sur 3 minimum</p>
+
+                <div class="onb__actions">
+                  <button class="btn btn--gold btn--block" data-next type="button">Continuer</button>
+                </div>
+              </div>
+
+              <!-- Étape 5 -->
+              <div class="onb__step" data-step="5">
+                <h2>Votre profil en images</h2>
+                <p class="onb__sub">
+                  Trois photos suffisent. Dans cette démonstration, elles sont
+                  simulées.
+                </p>
+
+                <div class="photo-slots" id="photoSlots">
+                  <button class="photo-slot" type="button">+</button>
+                  <button class="photo-slot" type="button">+</button>
+                  <button class="photo-slot" type="button">+</button>
+                </div>
+
+                <div class="field" style="margin-top: 18px">
+                  <label for="fBio">Quelques mots sur vous</label>
+                  <textarea id="fBio" placeholder="Ce que vous aimez, ce que vous cherchez, votre façon d'être."></textarea>
+                </div>
+
+                <div class="onb__actions">
+                  <button class="btn btn--gold btn--block" data-next type="button">Continuer</button>
+                </div>
+              </div>
+
+              <!-- Étape 6 -->
+              <div class="onb__step" data-step="6">
+                <h2>Vérifions votre identité</h2>
+                <p class="onb__sub">
+                  Trois minutes pour obtenir le badge doré et être mis en avant.
+                </p>
+
+                <div class="verify-visual" id="verifyVisual">
+                  <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="9" r="3.4" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M5 19c.8-3.4 3.6-5.2 7-5.2s6.2 1.8 7 5.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+
+                <ul class="check-list" style="list-style: none; padding: 0; margin: 0">
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    Selfie comparé automatiquement à vos photos
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    Numéro de téléphone confirmé par code
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    Votre selfie n'est jamais publié
+                  </li>
+                </ul>
+
+                <div class="onb__actions">
+                  <button class="btn btn--gold btn--block" id="btnVerify" type="button">
+                    Lancer la vérification
+                  </button>
+                  <button class="btn btn--ghost btn--block" data-action="finish-onb" type="button">
+                    Plus tard
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ---------- Découvrir ---------- -->
+          <section class="screen" id="screen-discover">
+            <div class="segmented" role="tablist">
+              <button class="is-active" data-pane="daily" role="tab" type="button">Choix SELECT</button>
+              <button data-pane="explore" role="tab" type="button">Explorer</button>
+            </div>
+
+            <div class="pane is-active" id="pane-daily">
+              <div class="pad">
+                <div class="daily-head">
+                  <h3>Votre sélection du jour</h3>
+                  <span id="dailyCounter">7 profils</span>
+                </div>
+                <div id="dailyList"></div>
+
+                <div class="daily-note">
+                  Nouvelle sélection chaque soir à 18 h. Elle s'affine avec vos
+                  réponses : plus vous échangez, plus elle devient juste.
+                </div>
+              </div>
+            </div>
+
+            <div class="pane" id="pane-explore">
+              <div class="deck-wrap">
+                <div class="deck" id="deck">
+                  <div class="deck-empty" id="deckEmpty" hidden>
+                    <div>
+                      <h3 style="font-family: var(--font-display); font-size: 20px; color: var(--text)">
+                        Vous avez tout vu
+                      </h3>
+                      <p style="margin-top: 8px; font-size: 14px">
+                        Revenez ce soir : de nouveaux profils arrivent chaque
+                        jour dans votre zone.
+                      </p>
+                      <button class="btn btn--ghost btn--s" style="margin-top: 16px" id="btnReshuffle" type="button">
+                        Revoir les profils
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="deck-actions">
+                <button class="round-btn round-btn--s round-btn--nope" data-swipe="left" type="button" aria-label="Passer">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="round-btn round-btn--star" data-swipe="star" type="button" aria-label="Coup de cœur">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3l2.3 5.4 5.7.5-4.4 3.9 1.4 5.7L12 15.6 6.9 18.5l1.4-5.7L4 8.9l5.7-.5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <button class="round-btn round-btn--like" data-swipe="right" type="button" aria-label="Aimer">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 20.5c-5-3.6-8.5-6.7-8.5-10.8A5 5 0 0112 7.6a5 5 0 018.5 2.1c0 4.1-3.5 7.2-8.5 10.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <button class="round-btn round-btn--s" data-swipe="undo" type="button" aria-label="Revenir en arrière">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 5L3.5 8.5 7 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.5 8.5H12a4.5 4.5 0 010 9h-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ---------- Admirateurs ---------- -->
+          <section class="screen" id="screen-likes">
+            <div class="pad">
+              <p class="section-label">Ils vous ont remarqué</p>
+              <div class="likes-grid" id="likesGrid"></div>
+
+              <div class="upsell" id="likesUpsell">
+                <span class="badge badge--premium">Premium</span>
+                <h3>Découvrez qui vous a aimé</h3>
+                <p>
+                  Vous avez <strong id="likesCount">6</strong> admirateurs en
+                  attente. Passez au Premium pour lever le flou et répondre.
+                </p>
+                <button class="btn btn--gold btn--block" data-action="open-premium" type="button">
+                  Voir mes admirateurs
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ---------- Messages ---------- -->
+          <section class="screen" id="screen-messages">
+            <div class="pad">
+              <p class="section-label">Nouveaux matchs</p>
+              <div class="match-row" id="matchRow"></div>
+
+              <p class="section-label" style="margin-top: 18px">Conversations</p>
+              <div id="threadList"></div>
+            </div>
+          </section>
+
+          <!-- ---------- Mon profil ---------- -->
+          <section class="screen" id="screen-me">
+            <div class="me-head">
+              <div class="me-avatar" id="meAvatar"></div>
+              <p class="me-name" id="meName">
+                Sory, 28
+                <span id="meBadge"></span>
+              </p>
+              <p class="me-meta" id="meMeta">Bamako · Ingénieur</p>
+
+              <div class="me-stats">
+                <div class="me-stat"><strong id="statViews">142</strong><span>Vues</span></div>
+                <div class="me-stat"><strong id="statLikes">6</strong><span>Admirateurs</span></div>
+                <div class="me-stat"><strong id="statMatches">0</strong><span>Matchs</span></div>
+              </div>
+            </div>
+
+            <div class="pad">
+              <p class="section-label">Mon compte</p>
+              <div class="list-card">
+                <button class="list-row" data-action="open-verify" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5.4c0 4.2-2.9 8-7 9.6-4.1-1.6-7-5.4-7-9.6V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                  Vérification d'identité
+                  <span class="list-row__end" id="verifyStatus">À faire</span>
+                </button>
+                <button class="list-row" data-action="open-premium" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.3 5.4 5.7.5-4.4 3.9 1.4 5.7L12 15.6 6.9 18.5l1.4-5.7L4 8.9l5.7-.5L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
+                  Formule
+                  <span class="list-row__end" id="planStatus">Essentiel</span>
+                </button>
+                <button class="list-row" data-action="open-filters" type="button">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 6h14M6 10h8M8.5 14h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+                  Mes critères de recherche
+                  <span class="list-row__end">Modifier</span>
+                </button>
+              </div>
+
+              <p class="section-label">Discrétion</p>
+              <div class="list-card">
+                <button class="list-row" data-toggle="blur" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" stroke="currentColor" stroke-width="1.6" /><circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.6" /></svg>
+                  Photos floutées par défaut
+                  <span class="list-row__end"><span class="switch" data-switch="blur"></span></span>
+                </button>
+                <button class="list-row" data-toggle="incognito" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M7 12V9a5 5 0 0110 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /><circle cx="8" cy="15.5" r="2.5" stroke="currentColor" stroke-width="1.6" /><circle cx="16" cy="15.5" r="2.5" stroke="currentColor" stroke-width="1.6" /></svg>
+                  Mode discret
+                  <span class="list-row__end"><span class="switch" data-switch="incognito"></span></span>
+                </button>
+                <button class="list-row" data-toggle="screenshot" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6" /><circle cx="12" cy="12.5" r="3" stroke="currentColor" stroke-width="1.6" /></svg>
+                  Alerte capture d'écran
+                  <span class="list-row__end"><span class="switch is-on" data-switch="screenshot"></span></span>
+                </button>
+              </div>
+
+              <p class="section-label">Sécurité</p>
+              <div class="list-card">
+                <button class="list-row" data-action="toast" data-message="Personne de confiance : fonction de démonstration." type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6" /><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S14 16 14.6 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /><path d="M16 7.5h5M18.5 5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                  Inviter une personne de confiance
+                  <span class="list-row__end">Facultatif</span>
+                </button>
+                <button class="list-row" data-action="toast" data-message="Signalement transmis à la modération." type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 21V4h11l-1.5 3.5L16 11H5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                  Signaler un profil
+                  <span class="list-row__end">24 h max</span>
+                </button>
+                <button class="list-row" data-action="toast" data-message="Compte masqué. Vos conversations restent accessibles." type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 6l8 12M16 6L8 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+                  Mettre mon compte en pause
+                  <span class="list-row__end">—</span>
+                </button>
+              </div>
+
+              <p class="hint" style="text-align: center; margin: 20px 0 8px">
+                Démonstration SELECT — les données sont enregistrées uniquement
+                dans ce navigateur.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- ---------- Navigation ---------- -->
+        <nav class="app__nav" id="appNav" aria-label="Navigation de l'application">
+          <button class="tab is-active" data-screen="discover" type="button">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+              <path d="M12 20.5c-5-3.6-8.5-6.7-8.5-10.8A5 5 0 0112 7.6a5 5 0 018.5 2.1c0 4.1-3.5 7.2-8.5 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+            Découvrir
+          </button>
+          <button class="tab" data-screen="likes" type="button">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l2.3 5.4 5.7.5-4.4 3.9 1.4 5.7L12 15.6 6.9 18.5l1.4-5.7L4 8.9l5.7-.5L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+            Admirateurs
+            <span class="tab__dot" id="likesDot">6</span>
+          </button>
+          <button class="tab" data-screen="messages" type="button">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+              <path d="M4 5h16v11H8l-4 3.5V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+            Messages
+            <span class="tab__dot" id="msgDot" hidden>1</span>
+          </button>
+          <button class="tab" data-screen="me" type="button">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="8.5" r="3.4" stroke="currentColor" stroke-width="1.6" />
+              <path d="M5 19c.8-3.4 3.6-5.2 7-5.2s6.2 1.8 7 5.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            Profil
+          </button>
+        </nav>
+
+        <!-- ---------- Conversation ---------- -->
+        <div class="chat" id="chat" aria-hidden="true">
+          <div class="chat__head">
+            <button class="icon-btn" id="chatBack" type="button" aria-label="Retour">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="chat__avatar" id="chatAvatar"></div>
+            <div>
+              <p class="chat__name" id="chatName">—</p>
+              <p class="chat__status" id="chatStatus">En ligne</p>
+            </div>
+            <button class="icon-btn" style="margin-left: auto" data-action="toast" data-message="Signalement transmis à la modération." type="button" aria-label="Signaler">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3v8M10 14.5v.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="chat__log" id="chatLog"></div>
+
+          <form class="chat__compose" id="chatForm">
+            <input id="chatInput" type="text" placeholder="Écrire un message…" autocomplete="off" />
+            <button class="send-btn" type="submit" aria-label="Envoyer">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M3 10l14-6-5 14-2.5-5.5L3 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- ---------- Fiche profil ---------- -->
+        <div class="sheet-backdrop" id="sheetBackdrop"></div>
+        <div class="sheet" id="sheet" aria-hidden="true">
+          <div class="sheet__grab"></div>
+          <button class="icon-btn sheet__close" id="sheetClose" type="button" aria-label="Fermer la fiche">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="sheet__body" id="sheetBody"></div>
+          <div class="sheet__actions">
+            <button class="btn btn--ghost" style="flex: 1" data-sheet-action="pass" type="button">Passer</button>
+            <button class="btn btn--gold" style="flex: 1.4" data-sheet-action="like" type="button">Envoyer un like</button>
+          </div>
+        </div>
+
+        <!-- ---------- Premium ---------- -->
+        <div class="modal" id="modalPremium">
+          <div class="modal__box modal__box--dark">
+            <span class="badge badge--premium">Formules</span>
+            <h3 class="modal__title" style="margin-top: 10px">Allez à l'essentiel</h3>
+            <p class="modal__desc">
+              Voyez qui vous a aimé, filtrez plus finement et démarquez-vous.
+              Sans engagement.
+            </p>
+
+            <button class="plan-mini is-selected" data-plan="premium" type="button">
+              <span>
+                <strong>Premium</strong>
+                <span>Admirateurs, filtres avancés, sans publicité</span>
+              </span>
+              <span class="plan-mini__price">5 000 F</span>
+            </button>
+            <button class="plan-mini" data-plan="prestige" type="button">
+              <span>
+                <strong>Prestige</strong>
+                <span>Mise en avant, 15 choix par jour, accompagnement</span>
+              </span>
+              <span class="plan-mini__price">12 000 F</span>
+            </button>
+            <button class="plan-mini" data-plan="boost" type="button">
+              <span>
+                <strong>Mise en avant seule</strong>
+                <span>30 minutes en tête de liste</span>
+              </span>
+              <span class="plan-mini__price">1 000 F</span>
+            </button>
+
+            <div class="pay-methods">
+              <span>Orange Money</span><span>Moov Money</span><span>Wave</span><span>Carte bancaire</span>
+            </div>
+
+            <button class="btn btn--gold btn--block" id="btnSubscribe" type="button">
+              Activer — 7 jours offerts
+            </button>
+            <button class="btn btn--ghost-light btn--block" style="margin-top: 8px" data-close-modal type="button">
+              Plus tard
+            </button>
+          </div>
+        </div>
+
+        <!-- ---------- Filtres ---------- -->
+        <div class="modal" id="modalFilters">
+          <div class="modal__box">
+            <h3 class="modal__title">Mes critères</h3>
+            <p class="modal__desc">Affinez qui apparaît dans votre exploration.</p>
+
+            <div class="field">
+              <label for="filterAge">Tranche d'âge</label>
+              <div class="range-row">
+                <input id="filterAge" type="range" min="18" max="45" value="35" />
+                <span class="range-value" id="filterAgeValue">18 – 35 ans</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="filterCity">Ville</label>
+              <select id="filterCity"></select>
+            </div>
+
+            <div class="field">
+              <label for="filterIntention">Intention</label>
+              <select id="filterIntention">
+                <option value="">Toutes</option>
+                <option value="mariage">Mariage</option>
+                <option value="serieux">Relation sérieuse</option>
+                <option value="connaissance">Faire connaissance</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Options</label>
+              <div class="list-card" style="margin: 0">
+                <button class="list-row" data-toggle="verifiedOnly" type="button">
+                  Profils vérifiés uniquement
+                  <span class="list-row__end"><span class="switch" data-switch="verifiedOnly"></span></span>
+                </button>
+                <button class="list-row" data-toggle="diaspora" type="button">
+                  Inclure la diaspora
+                  <span class="list-row__end"><span class="switch is-on" data-switch="diaspora"></span></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="locked-note" id="filtersLocked">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <rect x="4" y="8.5" width="12" height="8.5" rx="2" stroke="currentColor" stroke-width="1.6" />
+                <path d="M7 8.5V6.8a3 3 0 016 0v1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              Quartier, langues et profession : réservés au Premium.
+            </div>
+
+            <button class="btn btn--ink btn--block" id="btnApplyFilters" type="button">
+              Appliquer
+            </button>
+            <button class="btn btn--ghost btn--block" style="margin-top: 8px" data-close-modal type="button">
+              Annuler
+            </button>
+          </div>
+        </div>
+
+        <!-- ---------- Nouveau match ---------- -->
+        <div class="modal" id="modalMatch">
+          <div class="modal__box modal__box--dark match-celebration">
+            <div class="match-celebration__pair">
+              <div id="matchMe"></div>
+              <div id="matchThem"></div>
+            </div>
+            <span class="badge badge--premium">C'est réciproque</span>
+            <h3 class="modal__title" style="margin-top: 12px">
+              Vous plaisez à <span id="matchName">—</span>
+            </h3>
+            <p class="modal__desc">
+              La conversation est ouverte. Un premier message soigné change tout.
+            </p>
+            <button class="btn btn--gold btn--block" id="btnMatchChat" type="button">
+              Écrire maintenant
+            </button>
+            <button class="btn btn--ghost-light btn--block" style="margin-top: 8px" data-close-modal type="button">
+              Continuer à explorer
+            </button>
+          </div>
+        </div>
+
+        <!-- ---------- Vérification depuis le profil ---------- -->
+        <div class="modal" id="modalVerify">
+          <div class="modal__box">
+            <h3 class="modal__title">Vérification d'identité</h3>
+            <p class="modal__desc">
+              Un selfie guidé, comparé à vos photos. Il n'est jamais publié.
+            </p>
+            <div class="verify-visual" id="verifyVisual2">
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="9" r="3.4" stroke="currentColor" stroke-width="1.5" />
+                <path d="M5 19c.8-3.4 3.6-5.2 7-5.2s6.2 1.8 7 5.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <button class="btn btn--gold btn--block" id="btnVerify2" type="button">
+              Lancer la vérification
+            </button>
+            <button class="btn btn--ghost btn--block" style="margin-top: 8px" data-close-modal type="button">
+              Fermer
+            </button>
+          </div>
+        </div>
+
+        <div class="toast" id="toast"></div>
+      </div>
+    </div>
+
+    <p class="demo-hint">
+      Maquette interactive : faites glisser les cartes, ouvrez un profil,
+      répondez à un message. Aucune donnée n'est envoyée en ligne.
+    </p>
+
+    <script src="assets/js/portrait.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

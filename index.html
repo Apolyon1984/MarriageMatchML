@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SELECT — Rencontres sérieuses au Mali et dans la diaspora</title>
+    <meta
+      name="description"
+      content="SELECT est la plateforme de rencontres pensée pour le Mali et sa diaspora : profils vérifiés, sélection quotidienne de qualité, messagerie protégée. Maquette de démonstration."
+    />
+    <meta name="theme-color" content="#100e0c" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/landing.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23100e0c'/%3E%3Cpath d='M16 24c-4-3-7-5.6-7-9a4 4 0 017-2.6A4 4 0 0123 15c0 3.4-3 6-7 9z' fill='%23c8a44d'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <!-- ================= En-tête ================= -->
+    <header class="site-header" id="siteHeader">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="index.html" aria-label="SELECT, accueil">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="#1a1613" stroke="#c8a44d" stroke-opacity=".5" />
+            <path
+              d="M16 24c-4-3-7-5.6-7-9a4 4 0 017-2.6A4 4 0 0123 15c0 3.4-3 6-7 9z"
+              fill="#c8a44d"
+            />
+          </svg>
+          Select
+        </a>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="#principe">Le principe</a>
+          <a href="#decouverte">Découverte</a>
+          <a href="#confiance">Confiance</a>
+          <a href="#formules">Formules</a>
+          <a href="#questions">Questions</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn--ghost-light btn--s" href="app.html">Se connecter</a>
+          <a class="btn btn--gold btn--s" href="app.html?flow=signup">Créer mon profil</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= Héros ================= -->
+      <section class="hero">
+        <div class="wrap hero__inner">
+          <div>
+            <p class="eyebrow eyebrow--light">Bamako · Mali · Diaspora</p>
+            <h1 class="hero__title">
+              Rencontrer quelqu'un <em>de bien</em>, sérieusement.
+            </h1>
+            <p class="hero__lead">
+              SELECT réunit des célibataires maliens qui savent ce qu'ils
+              cherchent — de la belle rencontre au mariage. Profils vérifiés,
+              intentions annoncées, échanges respectueux.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--gold" href="app.html?flow=signup">
+                Commencer gratuitement
+              </a>
+              <a class="btn btn--ghost-light" href="app.html">
+                Voir la démonstration
+              </a>
+            </div>
+
+            <div class="hero__trust">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M10 2l6 2.5v5c0 3.6-2.5 6.8-6 8.5-3.5-1.7-6-4.9-6-8.5v-5L10 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M7.5 10l2 2 3.5-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Profils vérifiés
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <rect x="4" y="8.5" width="12" height="8.5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M7 8.5V6.8a3 3 0 016 0v1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                Photos protégées
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M3 10h14M10 3v14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                Orange Money & Moov Money
+              </span>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <article class="float-card float-card--a">
+              <div class="float-card__media" data-portrait="Aminata K."></div>
+              <div class="float-card__body">
+                <p class="float-card__name">
+                  Aminata, 27
+                  <svg width="15" height="15" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="8" fill="#2f6d4f" fill-opacity=".14" stroke="#2f6d4f" stroke-width="1.4"/>
+                    <path d="M6.6 10.2l2.2 2.2 4.6-4.8" stroke="#2f6d4f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </p>
+                <p class="float-card__meta">Bamako · ACI 2000 · Architecte</p>
+                <div class="float-card__tags">
+                  <span class="chip">Mariage</span>
+                  <span class="chip">Famille</span>
+                  <span class="chip">Voyages</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="float-card float-card--b">
+              <div class="float-card__media" data-portrait="Modibo T."></div>
+              <div class="float-card__body">
+                <p class="float-card__name">Modibo, 31</p>
+                <p class="float-card__meta">Paris · Ingénieur</p>
+                <div class="float-card__tags">
+                  <span class="chip">Sérieux</span>
+                  <span class="chip">Diaspora</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="float-note">
+              <p class="float-note__score">92 %</p>
+              <p class="float-note__label">Affinité SELECT</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Repères ================= -->
+      <section class="strip">
+        <div class="wrap strip__grid">
+          <div>
+            <p class="strip__num">18 – 45</p>
+            <p class="strip__label">Ans</p>
+          </div>
+          <div>
+            <p class="strip__num">100 %</p>
+            <p class="strip__label">Profils vérifiés</p>
+          </div>
+          <div>
+            <p class="strip__num">7</p>
+            <p class="strip__label">Choix SELECT / jour</p>
+          </div>
+          <div>
+            <p class="strip__num">4</p>
+            <p class="strip__label">Continents connectés</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Piliers ================= -->
+      <section class="section" id="principe">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Le principe</p>
+            <h2>Moins de profils, mieux choisis.</h2>
+            <p>
+              Ici, personne ne fait défiler pendant des heures pour rien. Chaque
+              membre annonce son intention, valide son identité, et reçoit
+              chaque jour une sélection travaillée sur ce qui compte vraiment.
+            </p>
+          </div>
+
+          <div class="pillars">
+            <article class="pillar reveal">
+              <div class="pillar__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 20.5c-5-3.6-8.5-6.7-8.5-10.8A5 5 0 0112 7.6a5 5 0 018.5 2.1c0 4.1-3.5 7.2-8.5 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Des intentions claires</h3>
+              <p>
+                Mariage, relation sérieuse ou belle rencontre : votre intention
+                est affichée dès le premier regard. Fini les malentendus après
+                trois semaines de messages.
+              </p>
+            </article>
+
+            <article class="pillar reveal">
+              <div class="pillar__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l7 3v5.4c0 4.2-2.9 8-7 9.6-4.1-1.6-7-5.4-7-9.6V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M9 12l2.2 2.2L15.5 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Une communauté vérifiée</h3>
+              <p>
+                Selfie de vérification, numéro confirmé, modération humaine.
+                Le badge doré ne s'achète pas : il se mérite en trois minutes.
+              </p>
+            </article>
+
+            <article class="pillar reveal">
+              <div class="pillar__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l2.3 5.4 5.7.5-4.4 3.9 1.4 5.7L12 15.6 6.9 18.5l1.4-5.7L4 8.9l5.7-.5L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Un cadre culturel respecté</h3>
+              <p>
+                Valeurs, pratique religieuse, rapport à la famille, projet de
+                vie : les critères qui comptent chez nous sont au cœur du
+                système d'affinité, pas relégués en petits caractères.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Découverte hybride ================= -->
+      <section class="section section--ink" id="decouverte">
+        <div class="wrap">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow eyebrow--light">La découverte</p>
+            <h2>Deux façons de rencontrer, une seule exigence.</h2>
+            <p>
+              La liberté d'explorer quand vous en avez envie, la qualité d'une
+              sélection quand vous n'avez pas le temps.
+            </p>
+          </div>
+
+          <div class="duo">
+            <article class="duo__card duo__card--gold reveal">
+              <span class="badge badge--premium">Chaque jour à 18 h</span>
+              <h3>Le Choix SELECT</h3>
+              <p>
+                Sept profils par jour, choisis pour vous et accompagnés de la
+                raison du rapprochement. À lire tranquillement, comme on ouvre
+                une lettre.
+              </p>
+              <ul class="duo__list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Score d'affinité expliqué, jamais opaque
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Valeurs, projet de vie et rythme de vie pris en compte
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  S'affine à mesure que vous répondez
+                </li>
+              </ul>
+            </article>
+
+            <article class="duo__card reveal">
+              <span class="badge">Sans limite d'horaire</span>
+              <h3>L'exploration libre</h3>
+              <p>
+                Le plaisir de la découverte, avec des filtres qui parlent la
+                langue du terrain : ville, quartier, profession, langues
+                parlées, présence en diaspora.
+              </p>
+              <ul class="duo__list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Cartes plein écran, gestes fluides
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Filtres avancés inclus dès la formule Premium
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Coup de cœur pour se démarquer d'un geste
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Étapes ================= -->
+      <section class="section section--tight">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">En pratique</p>
+            <h2>Quatre étapes, dix minutes.</h2>
+          </div>
+
+          <div class="steps">
+            <article class="step reveal">
+              <p class="step__num">01</p>
+              <h3>Créer son profil</h3>
+              <p>
+                Quelques questions bien posées valent mieux qu'un long
+                formulaire. Prénom, ville, intention, valeurs.
+              </p>
+            </article>
+            <article class="step reveal">
+              <p class="step__num">02</p>
+              <h3>Se faire vérifier</h3>
+              <p>
+                Un selfie guidé et un numéro confirmé. Le badge doré rassure
+                tout le monde, à commencer par vous.
+              </p>
+            </article>
+            <article class="step reveal">
+              <p class="step__num">03</p>
+              <h3>Découvrir</h3>
+              <p>
+                Votre sélection quotidienne le soir, l'exploration libre quand
+                vous voulez.
+              </p>
+            </article>
+            <article class="step reveal">
+              <p class="step__num">04</p>
+              <h3>Échanger</h3>
+              <p>
+                La conversation ne s'ouvre qu'en cas d'intérêt réciproque.
+                Personne ne reçoit de message non désiré.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Confiance ================= -->
+      <section class="section section--sand" id="confiance">
+        <div class="wrap safety">
+          <div class="section-head reveal" style="margin-bottom: 0">
+            <p class="eyebrow">Confiance & discrétion</p>
+            <h2>Votre vie privée n'est pas une option payante.</h2>
+            <p>
+              La discrétion est un besoin réel, ici plus qu'ailleurs. Elle est
+              donc intégrée par défaut, pour tous les membres.
+            </p>
+          </div>
+
+          <div class="safety__list">
+            <div class="safety__item reveal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 3v5.4c0 4.2-2.9 8-7 9.6-4.1-1.6-7-5.4-7-9.6V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h4>Vérification d'identité</h4>
+                <p>
+                  Selfie comparé aux photos du profil et numéro confirmé par
+                  code. Les comptes non vérifiés ne sont pas mis en avant.
+                </p>
+              </div>
+            </div>
+
+            <div class="safety__item reveal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="2.8" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M4 20L20 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <h4>Mode discret</h4>
+                <p>
+                  Photos floutées tant que vous n'avez pas donné votre accord,
+                  profil invisible aux personnes que vous excluez, capture
+                  d'écran signalée dans la conversation.
+                </p>
+              </div>
+            </div>
+
+            <div class="safety__item reveal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M4 5h16v11H8l-4 3.5V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h4>Messagerie sur accord mutuel</h4>
+                <p>
+                  Aucun message tant que l'intérêt n'est pas réciproque.
+                  Signalement en deux gestes, blocage immédiat et définitif.
+                </p>
+              </div>
+            </div>
+
+            <div class="safety__item reveal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S14 16 14.6 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M16 7.5h5M18.5 5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <h4>Accompagnement facultatif</h4>
+                <p>
+                  Vous pouvez inviter une personne de confiance à suivre vos
+                  échanges sérieux. Une option, jamais une obligation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Formules ================= -->
+      <section class="section" id="formules">
+        <div class="wrap">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">Formules</p>
+            <h2>Gratuit pour rencontrer. Premium pour aller plus vite.</h2>
+            <p>
+              L'essentiel reste accessible à tous. Ce qui se paie, c'est la
+              visibilité et le confort — jamais le droit d'être respecté.
+            </p>
+          </div>
+
+          <div class="plans">
+            <article class="plan reveal">
+              <p class="plan__name">Essentiel</p>
+              <p class="plan__price">Gratuit</p>
+              <p class="plan__desc">
+                Tout ce qu'il faut pour rencontrer sérieusement.
+              </p>
+              <ul class="plan__features">
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Profil complet et vérification</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>7 Choix SELECT par jour</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>30 likes par jour</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Messagerie illimitée sur vos matchs</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Mode discret et blocage</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="app.html?flow=signup">Créer mon profil</a>
+            </article>
+
+            <article class="plan plan--featured reveal">
+              <span class="badge badge--premium plan__flag">Le plus choisi</span>
+              <p class="plan__name">Premium</p>
+              <p class="plan__price">5 000 <small>FCFA / mois</small></p>
+              <p class="plan__desc">
+                Pour savoir qui s'intéresse à vous et choisir plus finement.
+              </p>
+              <ul class="plan__features">
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Tout l'Essentiel, sans publicité</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Voir qui vous a aimé</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Likes illimités et retour en arrière</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Filtres avancés (quartier, langues, profession)</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>5 Coups de cœur par mois</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Confirmation de lecture</li>
+              </ul>
+              <a class="btn btn--gold btn--block" href="app.html?flow=premium">Essayer 7 jours</a>
+            </article>
+
+            <article class="plan reveal">
+              <p class="plan__name">Prestige</p>
+              <p class="plan__price">12 000 <small>FCFA / mois</small></p>
+              <p class="plan__desc">
+                Un accompagnement rapproché pour un projet de mariage.
+              </p>
+              <ul class="plan__features">
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Tout le Premium</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Profil mis en avant chaque semaine</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Sélection élargie à 15 profils par jour</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Relecture de profil par notre équipe</li>
+                <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Vérification prioritaire</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="app.html?flow=premium">Découvrir Prestige</a>
+            </article>
+          </div>
+
+          <div class="addons reveal">
+            <div class="addon">
+              <strong>Mise en avant</strong>
+              <span>1 000 FCFA — 30 min en tête de liste</span>
+            </div>
+            <div class="addon">
+              <strong>Coups de cœur × 5</strong>
+              <span>1 500 FCFA</span>
+            </div>
+            <div class="addon">
+              <strong>Voir mes admirateurs</strong>
+              <span>2 000 FCFA — 24 h</span>
+            </div>
+            <div class="addon">
+              <strong>Vérification express</strong>
+              <span>500 FCFA — sous 1 h</span>
+            </div>
+          </div>
+
+          <p class="pay-note">
+            Paiement par Orange Money, Moov Money, Wave ou carte bancaire.
+            Sans engagement, résiliable à tout moment.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= Diaspora ================= -->
+      <section class="section section--ink">
+        <div class="wrap diaspora">
+          <div class="reveal">
+            <p class="eyebrow eyebrow--light">Ici et ailleurs</p>
+            <h2 style="font-size: clamp(30px, 3.6vw, 46px); margin: 16px 0 18px">
+              Le Mali ne s'arrête pas à ses frontières.
+            </h2>
+            <p style="color: var(--text-inverse-muted); font-size: 17px">
+              Beaucoup cherchent quelqu'un qui partage la même culture, à
+              Bamako comme à Paris ou à Montréal. SELECT relie les deux rives :
+              fuseau horaire affiché, filtre « ouvert à la distance », et
+              indication claire des projets de retour ou d'installation.
+            </p>
+          </div>
+
+          <div class="city-grid reveal">
+            <div class="city"><strong>Bamako</strong><span>Mali</span></div>
+            <div class="city"><strong>Sikasso</strong><span>Mali</span></div>
+            <div class="city"><strong>Ségou</strong><span>Mali</span></div>
+            <div class="city"><strong>Abidjan</strong><span>Côte d'Ivoire</span></div>
+            <div class="city"><strong>Dakar</strong><span>Sénégal</span></div>
+            <div class="city"><strong>Paris</strong><span>France</span></div>
+            <div class="city"><strong>Montréal</strong><span>Canada</span></div>
+            <div class="city"><strong>New York</strong><span>États-Unis</span></div>
+            <div class="city"><strong>Dubaï</strong><span>Émirats</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Questions ================= -->
+      <section class="section" id="questions">
+        <div class="wrap">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">Questions fréquentes</p>
+            <h2>Ce qu'on nous demande le plus.</h2>
+          </div>
+
+          <div class="faq reveal">
+            <details open>
+              <summary>SELECT est-il vraiment gratuit ?</summary>
+              <p>
+                Oui. Créer un profil, recevoir sa sélection quotidienne, aimer
+                et discuter avec ses matchs ne coûte rien. Les formules payantes
+                ajoutent de la visibilité et du confort, pas le droit de
+                rencontrer.
+              </p>
+            </details>
+            <details>
+              <summary>Comment évitez-vous les faux profils ?</summary>
+              <p>
+                Chaque membre passe par un selfie de vérification comparé aux
+                photos du profil et par la confirmation de son numéro. Une
+                équipe de modération traite les signalements, et les comptes non
+                vérifiés ne sont jamais mis en avant dans la sélection.
+              </p>
+            </details>
+            <details>
+              <summary>Mes photos peuvent-elles circuler ?</summary>
+              <p>
+                Vous pouvez garder vos photos floutées jusqu'à ce que vous
+                autorisiez une personne à les voir. Les captures d'écran sont
+                signalées dans la conversation et la rediffusion de photos
+                entraîne l'exclusion définitive.
+              </p>
+            </details>
+            <details>
+              <summary>Puis-je m'inscrire depuis l'étranger ?</summary>
+              <p>
+                Oui. SELECT est ouvert aux Maliens et à la diaspora. Vous
+                indiquez votre ville actuelle et, si vous le souhaitez, un
+                projet de retour ou d'installation.
+              </p>
+            </details>
+            <details>
+              <summary>La plateforme sera-t-elle disponible en bambara ?</summary>
+              <p>
+                Le lancement se fait en français. Une version bambara est prévue
+                dès que la qualité de traduction et l'interface auront été
+                validées avec des utilisateurs sur place.
+              </p>
+            </details>
+            <details>
+              <summary>À qui s'adresse SELECT ?</summary>
+              <p>
+                Aux célibataires de 18 à 45 ans, au Mali comme dans la diaspora,
+                qui cherchent une rencontre femme-homme sincère : de la belle
+                rencontre au projet de mariage.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Appel final ================= -->
+      <section class="final-cta">
+        <div class="wrap">
+          <p class="eyebrow eyebrow--light">Votre tour</p>
+          <h2>La bonne personne vous cherche aussi.</h2>
+          <p>
+            Créez votre profil en quelques minutes et recevez votre première
+            sélection dès ce soir.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--gold" href="app.html?flow=signup">Créer mon profil</a>
+            <a class="btn btn--ghost-light" href="app.html">Explorer la démonstration</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= Pied de page ================= -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="site-footer__grid">
+          <div>
+            <a class="brand" href="index.html">
+              <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="9" fill="#1a1613" stroke="#c8a44d" stroke-opacity=".5" />
+                <path d="M16 24c-4-3-7-5.6-7-9a4 4 0 017-2.6A4 4 0 0123 15c0 3.4-3 6-7 9z" fill="#c8a44d"/>
+              </svg>
+              Select
+            </a>
+            <p style="max-width: 34ch">
+              La plateforme de rencontres sérieuses pensée au Mali, pour le Mali
+              et sa diaspora.
+            </p>
+          </div>
+
+          <div>
+            <h4>Plateforme</h4>
+            <ul>
+              <li><a href="#principe">Le principe</a></li>
+              <li><a href="#decouverte">Découverte</a></li>
+              <li><a href="#formules">Formules</a></li>
+              <li><a href="app.html">Démonstration</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Confiance</h4>
+            <ul>
+              <li><a href="#confiance">Sécurité</a></li>
+              <li><a href="#questions">Questions fréquentes</a></li>
+              <li><a href="#confiance">Conseils de rencontre</a></li>
+              <li><a href="#confiance">Signaler un profil</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Société</h4>
+            <ul>
+              <li><a href="#principe">À propos</a></li>
+              <li><a href="#questions">Contact</a></li>
+              <li><a href="#formules">Conditions</a></li>
+              <li><a href="#confiance">Confidentialité</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>© 2026 SELECT — Bamako, Mali. Maquette de démonstration.</p>
+          <p>Profils, photos et messages présentés sont fictifs.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/portrait.js"></script>
+    <script>
+      (function () {
+        // Portraits générés (aucune photo de personne réelle dans la maquette)
+        document.querySelectorAll("[data-portrait]").forEach(function (el) {
+          var name = el.getAttribute("data-portrait");
+          el.style.backgroundImage = "url('" + window.SelectPortrait(name) + "')";
+          el.style.backgroundSize = "cover";
+          el.style.backgroundPosition = "center";
+        });
+
+        // En-tête au défilement
+        var header = document.getElementById("siteHeader");
+        var onScroll = function () {
+          header.classList.toggle("is-stuck", window.scrollY > 24);
+        };
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        // Apparition progressive
+        var items = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window)) {
+          items.forEach(function (el) { el.classList.add("is-visible"); });
+          return;
+        }
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry, i) {
+              if (!entry.isIntersecting) return;
+              var el = entry.target;
+              setTimeout(function () { el.classList.add("is-visible"); }, i * 70);
+              io.unobserve(el);
+            });
+          },
+          { threshold: 0.14, rootMargin: "0px 0px -60px 0px" }
+        );
+        items.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
+  </body>
+</html>
