@@ -1,6 +1,6 @@
 /* SELECT — démonstration interactive de l'application */
 
-body.app-body {
+.app-body {
   background: radial-gradient(
       1200px 700px at 50% -10%,
       rgba(200, 164, 77, 0.12),
@@ -61,7 +61,7 @@ body.app-body {
 }
 
 @media (max-width: 520px) {
-  body.app-body {
+  .app-body {
     padding: 0;
     gap: 0;
   }

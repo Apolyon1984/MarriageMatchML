@@ -1046,7 +1046,7 @@
     // Réinitialisation de la démonstration
     $("#btnReset").addEventListener("click", function () {
       try { localStorage.removeItem(STORE_KEY); } catch (err) {}
-      location.href = "app.html";
+      location.reload();
     });
 
     document.addEventListener("keydown", function (e) {

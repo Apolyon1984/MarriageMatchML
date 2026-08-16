@@ -26,6 +26,13 @@ python3 -m http.server 8000
 # puis http://localhost:8000
 ```
 
+Pour partager la maquette en un seul fichier, sans dossier `assets` :
+
+```bash
+node tools/build-single-file.js
+# produit select-maquette.html, autonome
+```
+
 ## Cadrage retenu
 
 - **Public** : 18–45 ans, Mali et diaspora, milieu urbain.
