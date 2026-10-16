@@ -1284,9 +1284,9 @@
   },
   "renders": {
     "latest": {
-      "id": "ac52bf3d-5dae-4f37-ad4b-4446d046066e",
-      "completedAt": 1792115266316,
-      "output": "/home/user/MarriageMatchML/videos/sira-promo/renders/apercu-brouillon.mp4",
+      "id": "037ab1d2-534a-4163-8ade-6c7f32d280c4",
+      "completedAt": 1792116037173,
+      "output": "/home/user/MarriageMatchML/videos/sira-promo/renders/video.mp4",
       "status": "completed",
       "revision": "70a9971d-ac6c-4fd2-90af-4f6f776b637e"
     },
