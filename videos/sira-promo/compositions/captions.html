@@ -1,0 +1,228 @@
+<template id="captions-template" data-composition-id="captions" data-width="1080" data-height="1920">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+
+<style data-brand-tokens>
+      @font-face { font-family: 'Playfair Display'; src: url('assets/fonts/PlayfairDisplay-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Playfair Display'; src: url('assets/fonts/PlayfairDisplay-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Open Sans'; src: url('assets/fonts/OpenSans-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Open Sans'; src: url('assets/fonts/OpenSans-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Open Sans'; src: url('assets/fonts/OpenSans-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: block; }
+      :root {
+      --bg: #F5F2ED;
+      --primary: #2563EB;
+      --text: #0F172A;
+      --text-muted: #475569;
+      --text-light: #9A9A9A;
+      --accent-light: rgba(37, 99, 235, 0.08);
+      --accent-medium: rgba(37, 99, 235, 0.15);
+      --border: rgba(37, 99, 235, 0.2);
+      --card-bg: rgba(37, 99, 235, 0.04);
+      --positive: #059669;
+      --negative: #dc2626;
+      --cap-ink: #0F172A;
+      --cap-canvas: #F5F2ED;
+      --cap-accent: #2563EB;
+      --cap-accent-2: #475569;
+      --font-display: "Playfair Display", system-ui, serif;
+      --font-body: "Open Sans", system-ui, sans-serif;
+      --cap-band-top: 1600px;
+      --cap-band-height: 320px;
+      }
+    </style>
+
+<style>
+  #captions-root {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .caption-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+  /* the keep-out band, from captionBand(H) — frame content stays above it */
+  .caption-stage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--cap-band-top, 900px);
+    height: var(--cap-band-height, 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caption-group {
+    /* every group is absolutely stacked over the SAME band — exactly one shown at a
+       time via opacity. Must be absolute: in-flow groups would lay out side-by-side. */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  /* THE tinted card — 4% cobalt fill, 1.5px 20%-cobalt border, soft 14px corners,
+     NO shadow (the tinted card does the lift; cast depth is forbidden) */
+  .caption-pill {
+    max-width: 78%;
+    padding: 20px 44px 24px;
+    background: color-mix(in srgb, var(--cap-accent, #1e2bfa) 4%, var(--cap-canvas, #fdfae7));
+    border: 1.5px solid color-mix(in srgb, var(--cap-accent, #1e2bfa) 20%, transparent);
+    border-radius: 14px;
+  }
+  .caption-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1em 0.34em;
+    font-family: "Playfair Display", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(40px, 4.4vw, 58px);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+
+  /* upcoming — muted gray, no chip */
+  .caption-word {
+    display: inline-block;
+    padding: 0 0.18em;
+    border-radius: 0.32em;
+    color: color-mix(in srgb, var(--cap-ink, #111111) 52%, var(--cap-canvas, #fdfae7));
+  }
+  /* current word — THE solid cobalt chip (the single-accent gesture; pill-rounded
+     fill, NO shadow), cream reading on top */
+  .caption-word.is-active {
+    color: var(--cap-canvas, #fdfae7);
+    background: var(--cap-accent, #1e2bfa);
+    box-shadow: none;
+  }
+  /* already spoken — solid near-black ink, chip cleared */
+  .caption-word.is-spoken {
+    color: var(--cap-ink, #111111);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* optional per-word accents (dormant until a word-classer tags them) */
+  /* brand / key term — cobalt, the system's one accent on a key word */
+  .caption-word.cap-brand {
+    color: var(--cap-accent, #1e2bfa);
+  }
+  /* numerals / data — cobalt 700, the figure voice */
+  .caption-word.cap-num {
+    font-family: "Playfair Display", system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--cap-accent, #1e2bfa);
+  }
+  /* emphasis — a directional-red hairline underline (inline only, never a fill) */
+  .caption-word.cap-cta {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--cap-accent-2, #dc2626);
+    text-underline-offset: 0.1em;
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    .caption-pill {
+      max-width: 92%;
+    }
+    .caption-line {
+      font-size: clamp(34px, 5.4vw, 48px);
+    }
+  }
+</style>
+
+<div
+  id="captions-root"
+  data-composition-id="captions"
+  data-timeline-locked
+  data-start="0"
+  data-duration="30.218"
+  data-fps="30"
+  data-width="1080"
+  data-height="1920"
+>
+  <div class="caption-layer" aria-hidden="true">
+    <div id="caption-stage" class="caption-stage"></div>
+  </div>
+</div>
+
+<script>
+  // captions.mjs injects the engine's scene-aware groups + real duration here.
+  var GROUPS = [{"id":"caption-group-0","frame":1,"start":0,"end":0.813,"text":"Des heures","words":[{"id":"caption-word-0-0","text":"Des","start":0,"end":0.372},{"id":"caption-word-0-1","text":"heures","start":0.488,"end":0.697}]},{"id":"caption-group-1","frame":1,"start":0.813,"end":1.44,"text":"à chercher","words":[{"id":"caption-word-1-0","text":"à","start":0.813,"end":0.882},{"id":"caption-word-1-1","text":"chercher","start":0.998,"end":1.393}]},{"id":"caption-group-2","frame":1,"start":1.44,"end":1.823,"text":"le bon","words":[{"id":"caption-word-2-0","text":"le","start":1.44,"end":1.521},{"id":"caption-word-2-1","text":"bon","start":1.579,"end":1.753}]},{"id":"caption-group-3","frame":1,"start":1.823,"end":2.368,"text":"article ?","words":[{"id":"caption-word-3-0","text":"article ?","start":1.823,"end":2.287}]},{"id":"caption-group-4","frame":1,"start":2.368,"end":3.464,"text":"Le bon arrêt ?","words":[{"id":"caption-word-4-0","text":"Le","start":2.368,"end":2.473},{"id":"caption-word-4-1","text":"bon","start":2.543,"end":2.74},{"id":"caption-word-4-2","text":"arrêt ?","start":2.81,"end":3.344}]},{"id":"caption-group-5","frame":2,"start":3.794,"end":4.967,"text":"Avec SIRA,","words":[{"id":"caption-word-5-0","text":"Avec","start":3.794,"end":4.247},{"id":"caption-word-5-1","text":"SIRA,","start":4.316,"end":4.851}]},{"id":"caption-group-6","frame":2,"start":4.967,"end":6.975,"text":"l'assistant juridique intelligent,","words":[{"id":"caption-word-6-0","text":"l'assistant","start":4.967,"end":5.477},{"id":"caption-word-6-1","text":"juridique","start":5.512,"end":5.988},{"id":"caption-word-6-2","text":"intelligent,","start":6.012,"end":6.882}]},{"id":"caption-group-7","frame":2,"start":6.975,"end":7.614,"text":"la réponse","words":[{"id":"caption-word-7-0","text":"la","start":6.975,"end":7.068},{"id":"caption-word-7-1","text":"réponse","start":7.138,"end":7.59}]},{"id":"caption-group-8","frame":2,"start":7.614,"end":8.055,"text":"arrive en","words":[{"id":"caption-word-8-0","text":"arrive","start":7.614,"end":7.927},{"id":"caption-word-8-1","text":"en","start":7.95,"end":7.997}]},{"id":"caption-group-9","frame":2,"start":8.055,"end":9.255,"text":"quelques secondes.","words":[{"id":"caption-word-9-0","text":"quelques","start":8.055,"end":8.426},{"id":"caption-word-9-1","text":"secondes.","start":8.45,"end":9.135}]},{"id":"caption-group-10","frame":3,"start":9.485,"end":9.973,"text":"Plus de","words":[{"id":"caption-word-10-0","text":"Plus","start":9.485,"end":9.764},{"id":"caption-word-10-1","text":"de","start":9.798,"end":9.88}]},{"id":"caption-group-11","frame":3,"start":9.973,"end":11.018,"text":"vingt domaines du","words":[{"id":"caption-word-11-0","text":"vingt","start":9.973,"end":10.309},{"id":"caption-word-11-1","text":"domaines","start":10.379,"end":10.843},{"id":"caption-word-11-2","text":"du","start":10.867,"end":10.971}]},{"id":"caption-group-12","frame":3,"start":11.018,"end":11.47,"text":"droit.","words":[{"id":"caption-word-12-0","text":"droit.","start":11.018,"end":11.354}]},{"id":"caption-group-13","frame":3,"start":11.47,"end":11.795,"text":"Plus de","words":[{"id":"caption-word-13-0","text":"Plus","start":11.47,"end":11.621},{"id":"caption-word-13-1","text":"de","start":11.656,"end":11.737}]},{"id":"caption-group-14","frame":3,"start":11.795,"end":12.898,"text":"cinq mille textes","words":[{"id":"caption-word-14-0","text":"cinq","start":11.795,"end":12.097},{"id":"caption-word-14-1","text":"mille","start":12.19,"end":12.399},{"id":"caption-word-14-2","text":"textes","start":12.457,"end":12.875}]},{"id":"caption-group-15","frame":3,"start":12.898,"end":13.386,"text":"de loi.","words":[{"id":"caption-word-15-0","text":"de","start":12.898,"end":12.98},{"id":"caption-word-15-1","text":"loi.","start":13.038,"end":13.328}]},{"id":"caption-group-16","frame":3,"start":13.386,"end":13.723,"text":"Plus de","words":[{"id":"caption-word-16-0","text":"Plus","start":13.386,"end":13.548},{"id":"caption-word-16-1","text":"de","start":13.583,"end":13.665}]},{"id":"caption-group-17","frame":3,"start":13.723,"end":15.596,"text":"cinq mille jurisprudences.","words":[{"id":"caption-word-17-0","text":"cinq","start":13.723,"end":13.99},{"id":"caption-word-17-1","text":"mille","start":14.083,"end":14.28},{"id":"caption-word-17-2","text":"jurisprudences.","start":14.326,"end":15.476}]},{"id":"caption-group-18","frame":4,"start":15.826,"end":17.235,"text":"Des sources fiables,","words":[{"id":"caption-word-18-0","text":"Des","start":15.826,"end":16.128},{"id":"caption-word-18-1","text":"sources","start":16.163,"end":16.592},{"id":"caption-word-18-2","text":"fiables,","start":16.65,"end":17.115}]},{"id":"caption-group-19","frame":4,"start":17.242,"end":18.407,"text":"toujours citées.","words":[{"id":"caption-word-19-0","text":"toujours","start":17.242,"end":17.591},{"id":"caption-word-19-1","text":"citées.","start":17.614,"end":18.287}]},{"id":"caption-group-20","frame":5,"start":18.637,"end":19.721,"text":"Formule Pro :","words":[{"id":"caption-word-20-0","text":"Formule","start":18.637,"end":19.171},{"id":"caption-word-20-1","text":"Pro :","start":19.252,"end":19.601}]},{"id":"caption-group-21","frame":5,"start":19.752,"end":21.238,"text":"vingt-cinq mille francs","words":[{"id":"caption-word-21-0","text":"vingt-cinq","start":19.752,"end":20.251},{"id":"caption-word-21-1","text":"mille","start":20.367,"end":20.599},{"id":"caption-word-21-2","text":"francs","start":20.669,"end":21.122}]},{"id":"caption-group-22","frame":5,"start":21.238,"end":22.445,"text":"CFA par mois,","words":[{"id":"caption-word-22-0","text":"CFA","start":21.238,"end":21.737},{"id":"caption-word-22-1","text":"par","start":21.783,"end":21.957},{"id":"caption-word-22-2","text":"mois,","start":22.027,"end":22.375}]},{"id":"caption-group-23","frame":5,"start":22.445,"end":22.875,"text":"ou deux","words":[{"id":"caption-word-23-0","text":"ou","start":22.445,"end":22.596},{"id":"caption-word-23-1","text":"deux","start":22.689,"end":22.84}]},{"id":"caption-group-24","frame":5,"start":22.875,"end":23.374,"text":"cent mille","words":[{"id":"caption-word-24-0","text":"cent","start":22.875,"end":23.072},{"id":"caption-word-24-1","text":"mille","start":23.118,"end":23.339}]},{"id":"caption-group-25","frame":5,"start":23.374,"end":24.144,"text":"par an.","words":[{"id":"caption-word-25-0","text":"par","start":23.374,"end":23.594},{"id":"caption-word-25-1","text":"an.","start":23.653,"end":24.024}]},{"id":"caption-group-26","frame":6,"start":24.374,"end":25.222,"text":"SIRA.","words":[{"id":"caption-word-26-0","text":"SIRA.","start":24.374,"end":25.105}]},{"id":"caption-group-27","frame":6,"start":25.222,"end":25.86,"text":"Le droit,","words":[{"id":"caption-word-27-0","text":"Le","start":25.222,"end":25.349},{"id":"caption-word-27-1","text":"droit,","start":25.407,"end":25.825}]},{"id":"caption-group-28","frame":6,"start":25.86,"end":26.301,"text":"en un","words":[{"id":"caption-word-28-0","text":"en","start":25.86,"end":26.057},{"id":"caption-word-28-1","text":"un","start":26.15,"end":26.22}]},{"id":"caption-group-29","frame":6,"start":26.301,"end":26.777,"text":"instant.","words":[{"id":"caption-word-29-0","text":"instant.","start":26.301,"end":26.719}]},{"id":"caption-group-30","frame":6,"start":26.777,"end":29.138,"text":"Abonnez-vous sur siramali.com.","words":[{"id":"caption-word-30-0","text":"Abonnez-vous","start":26.777,"end":27.427},{"id":"caption-word-30-1","text":"sur","start":27.451,"end":27.625},{"id":"caption-word-30-2","text":"siramali.com.","start":27.671,"end":29.018}]}];
+  var DURATION = 30.218;
+
+  (function () {
+    var stage = document.getElementById("caption-stage");
+
+    // build DOM: one .caption-group per group, .caption-word per word
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.createElement("div");
+      groupEl.className = "caption-group";
+      groupEl.id = "caption-group-" + g;
+      var pill = document.createElement("div");
+      pill.className = "caption-pill";
+      var line = document.createElement("div");
+      line.className = "caption-line";
+      (group.words || []).forEach(function (w, i) {
+        var span = document.createElement("span");
+        span.className = "caption-word";
+        span.id = "caption-word-" + g + "-" + i;
+        span.textContent = String(w.text);
+        line.appendChild(span);
+      });
+      pill.appendChild(line);
+      groupEl.appendChild(pill);
+      stage.appendChild(groupEl);
+    });
+
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.getElementById("caption-group-" + g);
+      var words = group.words || [];
+      var next = GROUPS[g + 1];
+      var isLast = g === GROUPS.length - 1;
+      var start = Math.max(0, Number(group.start));
+      var end = isLast ? DURATION : Math.min(Number(next.start), Number(group.end) + 0.3);
+      if (end <= start) end = start + 0.01;
+
+      // group on/off — exactly one group visible at a time
+      tl.set(groupEl, { opacity: 1 }, start);
+      tl.set(groupEl, { opacity: 0 }, end);
+
+      // 3-state karaoke via className SETS — seek-safe (gsap.set applies on the
+      // engine's frame-by-frame seek; .call callbacks would NOT fire).
+      words.forEach(function (w, i) {
+        var el = document.getElementById("caption-word-" + g + "-" + i);
+        var at = Math.max(start, Number(w.start));
+        tl.set(el, { className: "caption-word" }, start); // upcoming (also resets on reverse-seek)
+        tl.set(el, { className: "caption-word is-active" }, at); // current
+        tl.fromTo(el, { scale: 0.985 }, { scale: 1, duration: 0.18, ease: "power1.out" }, at);
+        if (i + 1 < words.length) {
+          var nextAt = Math.max(start, Number(words[i + 1].start));
+          tl.set(el, { className: "caption-word is-spoken" }, nextAt); // demote when next activates
+        }
+      });
+      if (words.length) {
+        var lastEl = document.getElementById("caption-word-" + g + "-" + (words.length - 1));
+        var lastSpoken = Math.min(end, Number(words[words.length - 1].end) + 0.1);
+        tl.set(lastEl, { className: "caption-word is-spoken" }, lastSpoken);
+      }
+    });
+
+    // full-span anchor so the sub-comp timeline spans the whole video
+    tl.to({}, { duration: DURATION }, 0);
+    window.__timelines["captions"] = tl;
+  })();
+</script>
+
+<style>
+  .caption-line { line-height: 1.1 !important; }
+</style>
+</template>

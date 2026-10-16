@@ -1,81 +1,127 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-  </head>
-  <body>
-    <template>
-      <style>
-        #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Open Sans', sans-serif; color: #0F172A; }
-        #root .bg { position: absolute; inset: 0; background: #F5F2ED; }
-        #root .layer { position: absolute; inset: 0; }
-        #root svg.art { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
-        #root .eyebrow { position: absolute; left: 0; right: 0; text-align: center; font: 600 26px/1 'Open Sans', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #2563EB; }
-        #root .pill { display: inline-block; padding: 14px 28px; border-radius: 100px; background: rgba(37,99,235,0.08); border: 2px solid rgba(37,99,235,0.2); }
-        #root .h1 { position: absolute; left: 70px; right: 70px; text-align: center; font: 700 88px/1.08 'Playfair Display', serif; letter-spacing: -0.02em; color: #0F172A; }
-        #root .h1 em { font-style: italic; font-weight: 400; color: #2563EB; }
-        #root .card { position: absolute; background: #FFFFFF; border: 2px solid rgba(37,99,235,0.2); border-radius: 14px; }
-        #root .line { height: 18px; border-radius: 9px; background: #E2E8F0; margin-top: 18px; }
-        
-      </style>
-      <div id="root" data-composition-id="f03-ville-chiffres" data-width="1080" data-height="1920">
-        <div class="bg clip" data-start="0" data-duration="7.2"></div>
-        <div class="layer clip" data-start="0" data-duration="7.2">
+<template>
+  <style>
+    @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;src:url('assets/fonts/PlayfairDisplay-400i.woff2') format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;src:url('assets/fonts/PlayfairDisplay-400.woff2') format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;src:url('assets/fonts/PlayfairDisplay-700.woff2') format('woff2');}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:url('assets/fonts/OpenSans-400.woff2') format('woff2');}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:url('assets/fonts/OpenSans-600.woff2') format('woff2');}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:url('assets/fonts/OpenSans-700.woff2') format('woff2');}
 
-          <svg class="art" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><polygon points="394.5,1022.0 976.5,1358.0 661.2,1540.0 79.3,1204.0" fill="#E6E3DF"/>
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Open Sans', sans-serif; color: #0F172A; }
+    .bg { position: absolute; inset: 0; background: #F5F2ED; }
+    .layer { position: absolute; inset: 0; }
+    svg.art { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+    .eyebrow { position: absolute; left: 0; right: 0; text-align: center; font: 600 26px/1 'Open Sans', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #2563EB; }
+    .pill { display: inline-block; padding: 14px 28px; border-radius: 100px; background: rgba(37,99,235,0.08); border: 2px solid rgba(37,99,235,0.2); }
+    .h1 { position: absolute; left: 70px; right: 70px; text-align: center; font: 700 88px/1.08 'Playfair Display', serif; letter-spacing: -0.02em; color: #0F172A; }
+    .h1 em { font-style: italic; font-weight: 400; color: #2563EB; display: inline-block; }
+    .h1 .l { display: block; }
+    .card { position: absolute; background: #FFFFFF; border: 2px solid rgba(37,99,235,0.2); border-radius: 14px; }
+    .line { height: 18px; border-radius: 9px; background: #E2E8F0; margin-top: 18px; transform-origin: left center; }
+    
+  </style>
+  <div id="root" data-composition-id="03-ville-chiffres" data-width="1080" data-height="1920">
+    <div id="bg-03-ville-chiffres" class="bg clip" data-start="0" data-duration="6.341" data-track-index="0"></div>
+    <div id="layer-03-ville-chiffres" class="layer clip" data-start="0" data-duration="6.341" data-track-index="1">
+
+      <div id="world"><svg class="art" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><polygon points="394.5,1022.0 976.5,1358.0 661.2,1540.0 79.3,1204.0" fill="#E6E3DF"/>
+<g id="q0-00">
 <polygon points="327.8,1088.5 382.4,1120.0 382.4,1008.0 327.8,976.5" fill="#0C1322"/>
 <polygon points="436.9,1088.5 382.4,1120.0 382.4,1008.0 436.9,976.5" fill="#0A0F1B"/>
 <polygon points="382.4,945.0 436.9,976.5 382.4,1008.0 327.8,976.5" fill="#2C3344"/>
+</g>
+<g id="q0-01">
 <polygon points="261.1,1127.0 315.7,1158.5 315.7,968.1 261.1,936.6" fill="#474C57"/>
 <polygon points="370.3,1127.0 315.7,1158.5 315.7,968.1 370.3,936.6" fill="#393C45"/>
 <polygon points="315.7,905.1 370.3,936.6 315.7,968.1 261.1,936.6" fill="#6B707C"/>
+</g>
+<g id="q0-10">
 <polygon points="394.5,1127.0 449.1,1158.5 449.1,1007.3 394.5,975.8" fill="#474C57"/>
 <polygon points="503.6,1127.0 449.1,1158.5 449.1,1007.3 503.6,975.8" fill="#393C45"/>
 <polygon points="449.1,944.3 503.6,975.8 449.1,1007.3 394.5,975.8" fill="#6B707C"/>
+</g>
+<g id="q0-11">
 <polygon points="327.8,1165.5 382.4,1197.0 382.4,1085.0 327.8,1053.5" fill="#0C1322"/>
 <polygon points="436.9,1165.5 382.4,1197.0 382.4,1085.0 436.9,1053.5" fill="#0A0F1B"/>
 <polygon points="382.4,1022.0 436.9,1053.5 382.4,1085.0 327.8,1053.5" fill="#2C3344"/>
+</g>
+<g id="q1-00">
 <polygon points="497.6,1228.5 552.1,1260.0 552.1,976.5 497.6,945.0" fill="#1E51C1"/>
 <polygon points="606.7,1228.5 552.1,1260.0 552.1,976.5 606.7,945.0" fill="#184099"/>
 <polygon points="552.1,913.5 606.7,945.0 552.1,976.5 497.6,945.0" fill="#3F76ED"/>
+</g>
+<g id="q1-01">
 <polygon points="430.9,1267.0 485.4,1298.5 485.4,1088.5 430.9,1057.0" fill="#5478C6"/>
 <polygon points="540.0,1267.0 485.4,1298.5 485.4,1088.5 540.0,1057.0" fill="#425F9D"/>
 <polygon points="485.4,1025.5 540.0,1057.0 485.4,1088.5 430.9,1057.0" fill="#789FF3"/>
+</g>
+<g id="q1-10">
 <polygon points="564.2,1267.0 618.8,1298.5 618.8,941.5 564.2,910.0" fill="#5478C6"/>
 <polygon points="673.4,1267.0 618.8,1298.5 618.8,941.5 673.4,910.0" fill="#425F9D"/>
 <polygon points="618.8,878.5 673.4,910.0 618.8,941.5 564.2,910.0" fill="#789FF3"/>
+</g>
+<g id="q1-11">
 <polygon points="497.6,1305.5 552.1,1337.0 552.1,1053.5 497.6,1022.0" fill="#1E51C1"/>
 <polygon points="606.7,1305.5 552.1,1337.0 552.1,1053.5 606.7,1022.0" fill="#184099"/>
 <polygon points="552.1,990.5 606.7,1022.0 552.1,1053.5 497.6,1022.0" fill="#3F76ED"/>
+</g>
+<g id="q2-00">
 <polygon points="667.3,1368.5 721.9,1400.0 721.9,1114.4 667.3,1082.9" fill="#0C1322"/>
 <polygon points="776.4,1368.5 721.9,1400.0 721.9,1114.4 776.4,1082.9" fill="#0A0F1B"/>
 <polygon points="721.9,1051.4 776.4,1082.9 721.9,1114.4 667.3,1082.9" fill="#2C3344"/>
+</g>
+<g id="q2-01">
 <polygon points="600.6,1407.0 655.2,1438.5 655.2,1211.7 600.6,1180.2" fill="#474C57"/>
 <polygon points="709.7,1407.0 655.2,1438.5 655.2,1211.7 709.7,1180.2" fill="#393C45"/>
 <polygon points="655.2,1148.7 709.7,1180.2 655.2,1211.7 600.6,1180.2" fill="#6B707C"/>
+</g>
+<g id="q2-10">
 <polygon points="734.0,1407.0 788.5,1438.5 788.5,1270.5 734.0,1239.0" fill="#474C57"/>
 <polygon points="843.1,1407.0 788.5,1438.5 788.5,1270.5 843.1,1239.0" fill="#393C45"/>
 <polygon points="788.5,1207.5 843.1,1239.0 788.5,1270.5 734.0,1239.0" fill="#6B707C"/>
+</g>
+<g id="q2-11">
 <polygon points="667.3,1445.5 721.9,1477.0 721.9,1191.4 667.3,1159.9" fill="#0C1322"/>
 <polygon points="776.4,1445.5 721.9,1477.0 721.9,1191.4 776.4,1159.9" fill="#0A0F1B"/>
-<polygon points="721.9,1128.4 776.4,1159.9 721.9,1191.4 667.3,1159.9" fill="#2C3344"/></svg>
-          <div class="eyebrow" style="top:262px"><span class="pill">La base SIRA</span></div>
-          <div style="position:absolute;left:110px;top:360px;"><div style="display:flex;align-items:baseline;gap:22px;opacity:0.45;margin-top:18px">
-              <div style="font:700 104px/1 'Open Sans';color:#0F172A;letter-spacing:-0.02em">20+</div>
+<polygon points="721.9,1128.4 776.4,1159.9 721.9,1191.4 667.3,1159.9" fill="#2C3344"/>
+</g></svg></div>
+      <div class="eyebrow" id="eb" style="top:262px"><span class="pill">La base SIRA</span></div>
+      <div style="position:absolute;left:110px;top:360px;"><div class="row" id="r0" style="display:flex;align-items:baseline;gap:22px;margin-top:18px">
+              <div class="num" style="font:700 104px/1 'Open Sans';letter-spacing:-0.02em;color:#0F172A"><span id="n0">0</span>+</div>
               <div style="font:400 40px/1.1 'Playfair Display';color:#0F172A">domaines du droit</div>
-            </div><div style="display:flex;align-items:baseline;gap:22px;opacity:1.0;margin-top:18px">
-              <div style="font:700 104px/1 'Open Sans';color:#2563EB;letter-spacing:-0.02em">5 000+</div>
+            </div><div class="row" id="r1" style="display:flex;align-items:baseline;gap:22px;margin-top:18px">
+              <div class="num" style="font:700 104px/1 'Open Sans';letter-spacing:-0.02em;color:#0F172A"><span id="n1">0</span>+</div>
               <div style="font:400 40px/1.1 'Playfair Display';color:#0F172A">textes de loi</div>
-            </div><div style="display:flex;align-items:baseline;gap:22px;opacity:0.45;margin-top:18px">
-              <div style="font:700 104px/1 'Open Sans';color:#0F172A;letter-spacing:-0.02em">5 000+</div>
+            </div><div class="row" id="r2" style="display:flex;align-items:baseline;gap:22px;margin-top:18px">
+              <div class="num" style="font:700 104px/1 'Open Sans';letter-spacing:-0.02em;color:#0F172A"><span id="n2">0</span>+</div>
               <div style="font:400 40px/1.1 'Playfair Display';color:#0F172A">jurisprudences</div>
             </div></div>
-        </div>
-      </div>
-      <script>
-        window.__timelines = window.__timelines || {};
-        window.__timelines["f03-ville-chiffres"] = gsap.timeline({ paused: true });
-      </script>
-    </template>
-  </body>
-</html>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const R = "[data-composition-id='03-ville-chiffres'] ";
+      const q = (s) => document.querySelectorAll(R + s);
+      const fmt = (n) => Math.round(n).toLocaleString("fr-FR").replace(/[\u202f\u00a0]/g, "\u00a0");
+
+      tl.fromTo(q("#world"), { x: 40 }, { x: -40, duration: 6.341, ease: "none" }, 0);
+      tl.fromTo(q("#eb"), { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.4 }, 0);
+      const targets = [20, 5000, 5000];
+      const cues = [0.49, 2.31, 4.24];
+      cues.forEach((t, k) => {
+        // le quartier k s'élève, son compteur monte, il passe en bleu puis s'efface au profit du suivant
+        tl.fromTo(q("g[id^='q" + k + "-']"), { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.08 }, Math.max(0, t - 0.35));
+        tl.fromTo(q("#r" + k), { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, Math.max(0, t - 0.2));
+        tl.fromTo(q("#r" + k + " .num"), { color: "#0F172A" }, { color: "#2563EB", duration: 0.2 }, t);
+        const c = { v: 0 };
+        tl.to(c, { v: targets[k], duration: 1.0, ease: "power2.out", onUpdate: () => { q("#n" + k)[0].textContent = fmt(c.v); } }, t);
+        if (k < 2) tl.to(q("#r" + k), { opacity: 0.45, duration: 0.3 }, cues[k + 1] - 0.2);
+        if (k < 2) tl.to(q("#r" + k + " .num"), { color: "#0F172A", duration: 0.3 }, cues[k + 1] - 0.2);
+      });
+      tl.set({}, {}, 6.341);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["03-ville-chiffres"] = tl;
+    })();
+  </script>
+</template>
