@@ -164,7 +164,7 @@ def f02():
           <img src="assets/logo_sira.png" style="position:absolute;left:300px;top:250px;width:480px;" alt="SIRA" />
           <div class="card" style="left:90px;top:500px;width:900px;padding:30px 36px;">
             <div style="font:600 22px/1 'Open Sans';color:{BLUE};letter-spacing:.12em;text-transform:uppercase">Votre question</div>
-            <div style="font:400 40px/1.3 'Playfair Display';color:{INK};margin-top:14px">Quelles sont les conditions de validité d'un contrat&nbsp;?</div>
+            <div style="font:400 40px/1.3 'Playfair Display';color:{INK};margin-top:14px">Quels sont les délais de garde à vue&nbsp;?</div>
           </div>
           <div class="card" style="left:90px;top:745px;width:900px;padding:30px 36px;background:{INK};border-color:{INK};">
             <div style="display:flex;justify-content:space-between;align-items:center">
@@ -204,15 +204,17 @@ def f03():
 
 # ── Plan 4 : des sources citées ──────────────────────────────────────────────
 def f04():
-    iso = Iso(540, 1370, 70)
+    iso = Iso(540, 1450, 64)
     iso.book_stack(-1.2, -0.6, 0, 6, [INK, BLUE_D, WHITE, SLATE], w=2.4, d=1.6, t=0.36)
-    chips = ["Acte uniforme OHADA", "Code pénal du Mali", "Arrêt de la Cour suprême"]
+    chips = [("Code de procédure pénale", "Loi n°2024-028 du 13 décembre 2024"),
+             ("Constitution du Mali", "du 22 juillet 2023"),
+             ("Code pénal", "Loi n°2024-027 du 13 décembre 2024")]
     chip_html = "".join(
-        f"""<div style="display:flex;align-items:center;gap:16px;margin-top:20px;padding:16px 22px;border-radius:100px;background:rgba(37,99,235,0.08);border:2px solid rgba(37,99,235,0.2)">
-              <div style="width:40px;height:40px;border-radius:50%;background:{BLUE};color:{WHITE};font:700 26px/40px 'Open Sans';text-align:center">✓</div>
-              <div style="font:600 30px/1 'Open Sans';color:{INK}">{c}</div>
+        f"""<div style="display:flex;align-items:center;gap:18px;margin-top:18px;padding:16px 24px;border-radius:24px;background:rgba(37,99,235,0.08);border:2px solid rgba(37,99,235,0.2)">
+              <div style="flex:none;width:40px;height:40px;border-radius:50%;background:{BLUE};color:{WHITE};font:700 26px/40px 'Open Sans';text-align:center">✓</div>
+              <div><div style="font:700 29px/1.15 'Open Sans';color:{INK}">{t}</div><div style="font:400 23px/1.3 'Open Sans';color:{SLATE};margin-top:4px">{r}</div></div>
             </div>"""
-        for c in chips)
+        for t, r in chips)
     body = f"""
           {svg_wrap(iso.svg())}
           <div class="h1" style="top:290px">Des sources fiables,<br/><em>toujours citées.</em></div>

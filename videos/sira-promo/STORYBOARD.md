@@ -30,7 +30,7 @@ keyMessage: chercher le bon texte coûte des heures.
 
 ## Frame 2 — SIRA range tout
 
-- scene: Le logo SIRA se pose, les piles se rangent d'un coup en une ville isométrique ordonnée ; une question tapée reçoit sa réponse en quelques secondes
+- scene: Le logo SIRA se pose, les piles se rangent d'un coup en une ville isométrique ordonnée ; la question « Quels sont les délais de garde à vue ? » reçoit sa réponse en quelques secondes
 - voiceover: "Avec SIRA, l'assistant juridique intelligent, la réponse arrive en quelques secondes."
 - duration: 5.5s
 - transition_in: zoom-through
@@ -64,7 +64,7 @@ keyMessage: tout le droit utile est déjà dans SIRA.
 
 ## Frame 4 — Des sources citées
 
-- scene: Une carte réponse isométrique se pose ; sous le texte, des pastilles de références (article, arrêt) s'allument une à une et se cochent
+- scene: Une carte réponse isométrique se pose ; sous le texte, trois pastilles de sources s'allument une à une et se cochent : Code de procédure pénale (Loi n°2024-028 du 13 décembre 2024), Constitution du 22 juillet 2023, Code pénal (Loi n°2024-027 du 13 décembre 2024)
 - voiceover: "Des sources fiables, toujours citées."
 - duration: 3.5s
 - transition_in: crossfade
