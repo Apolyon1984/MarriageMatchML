@@ -5,7 +5,8 @@ message: "Avec SIRA, la réponse juridique fiable et sourcée arrive en quelques
 arc: PAS (hook douleur → produit → preuves chiffrées → confiance → offre → CTA)
 audience: professionnels du droit au Mali et dans l'espace OHADA (avocats, magistrats, juristes)
 mode: collaborative
-music: corporate léger, confiant et minimal, tech discret
+music: none
+music_note: fond musical HeyGen « calm minimal corporate underscore » (id 7170c9b0ac08443ab13ab9bedfe53501), posé en hôte dans audio_meta.json
 vo_mode: verbatim
 style: motion design 3D isométrique, fond crème, bleu SIRA comme unique accent
 ---
@@ -16,7 +17,7 @@ style: motion design 3D isométrique, fond crème, bleu SIRA comme unique accent
 - voiceover: "Des heures à chercher le bon article ? Le bon arrêt ?"
 - duration: 4.5s
 - transition_in: cut
-- status: outline
+- status: built
 - src: compositions/frames/01-enseveli.html
 - type: hook
 - persuasion: Pain validation
@@ -33,7 +34,7 @@ keyMessage: chercher le bon texte coûte des heures.
 - voiceover: "Avec SIRA, l'assistant juridique intelligent, la réponse arrive en quelques secondes."
 - duration: 5.5s
 - transition_in: zoom-through
-- status: outline
+- status: built
 - src: compositions/frames/02-sira-range.html
 - type: product_intro
 - persuasion: Negative contrast
@@ -50,7 +51,7 @@ keyMessage: SIRA donne la réponse en quelques secondes.
 - voiceover: "Plus de vingt domaines du droit. Plus de cinq mille textes de loi. Plus de cinq mille jurisprudences."
 - duration: 7s
 - transition_in: crossfade
-- status: outline
+- status: built
 - src: compositions/frames/03-ville-chiffres.html
 - type: feature_showcase
 - persuasion: Rule of three + Statistical proof
@@ -67,7 +68,7 @@ keyMessage: tout le droit utile est déjà dans SIRA.
 - voiceover: "Des sources fiables, toujours citées."
 - duration: 3.5s
 - transition_in: crossfade
-- status: outline
+- status: built
 - src: compositions/frames/04-sources.html
 - type: benefit_highlight
 - persuasion: Risk reversal
@@ -84,7 +85,7 @@ keyMessage: chaque réponse renvoie à sa source.
 - voiceover: "Formule Pro : vingt-cinq mille francs CFA par mois, ou deux cent mille par an."
 - duration: 5s
 - transition_in: push-slide LEFT
-- status: outline
+- status: built
 - src: compositions/frames/05-formule-pro.html
 - type: benefit_highlight
 - persuasion: Value stacking
@@ -101,7 +102,7 @@ keyMessage: un prix clair, au mois ou à l'année.
 - voiceover: "SIRA. Le droit, en un instant. Abonnez-vous sur siramali.com."
 - duration: 4.5s
 - transition_in: zoom-through
-- status: outline
+- status: built
 - src: compositions/frames/06-cta.html
 - type: cta
 - persuasion: Scarcity/urgency (immédiateté)

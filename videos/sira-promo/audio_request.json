@@ -1,0 +1,37 @@
+{
+  "provider": "elevenlabs",
+  "speed": "1.0",
+  "lines": [
+    {
+      "id": "01",
+      "text": "Des heures à chercher le bon article ? Le bon arrêt ?"
+    },
+    {
+      "id": "02",
+      "text": "Avec SIRA, l'assistant juridique intelligent, la réponse arrive en quelques secondes."
+    },
+    {
+      "id": "03",
+      "text": "Plus de vingt domaines du droit. Plus de cinq mille textes de loi. Plus de cinq mille jurisprudences."
+    },
+    {
+      "id": "04",
+      "text": "Des sources fiables, toujours citées."
+    },
+    {
+      "id": "05",
+      "text": "Formule Pro : vingt-cinq mille francs CFA par mois, ou deux cent mille par an."
+    },
+    {
+      "id": "06",
+      "text": "SIRA. Le droit, en un instant. Abonnez-vous sur siramali.com."
+    }
+  ],
+  "bgm": {
+    "mode": "retrieve",
+    "query": "corporate léger, confiant et minimal, tech discret",
+    "blob": "Avec SIRA, la réponse juridique fiable et sourcée arrive en quelques secondes",
+    "arc": "PAS (hook douleur → produit → preuves chiffrées → confiance → offre → CTA)"
+  },
+  "voice": "mkICqLRQ2Z3C1DGIKjC7"
+}

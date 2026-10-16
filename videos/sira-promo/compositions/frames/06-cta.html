@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Open Sans', sans-serif; color: #0F172A; }
+        #root .bg { position: absolute; inset: 0; background: #F5F2ED; }
+        #root .layer { position: absolute; inset: 0; }
+        #root svg.art { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+        #root .eyebrow { position: absolute; left: 0; right: 0; text-align: center; font: 600 26px/1 'Open Sans', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #2563EB; }
+        #root .pill { display: inline-block; padding: 14px 28px; border-radius: 100px; background: rgba(37,99,235,0.08); border: 2px solid rgba(37,99,235,0.2); }
+        #root .h1 { position: absolute; left: 70px; right: 70px; text-align: center; font: 700 88px/1.08 'Playfair Display', serif; letter-spacing: -0.02em; color: #0F172A; }
+        #root .h1 em { font-style: italic; font-weight: 400; color: #2563EB; }
+        #root .card { position: absolute; background: #FFFFFF; border: 2px solid rgba(37,99,235,0.2); border-radius: 14px; }
+        #root .line { height: 18px; border-radius: 9px; background: #E2E8F0; margin-top: 18px; }
+        
+      </style>
+      <div id="root" data-composition-id="f06-cta" data-width="1080" data-height="1920">
+        <div class="bg clip" data-start="0" data-duration="5.4"></div>
+        <div class="layer clip" data-start="0" data-duration="5.4">
+
+          <svg class="art" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><circle cx="540" cy="760" r="300" fill="none" stroke="#2563EB" stroke-opacity="0.10" stroke-width="2"/><circle cx="540" cy="760" r="400" fill="none" stroke="#2563EB" stroke-opacity="0.08" stroke-width="2"/><circle cx="540" cy="760" r="500" fill="none" stroke="#2563EB" stroke-opacity="0.06" stroke-width="2"/><circle cx="540" cy="760" r="600" fill="none" stroke="#2563EB" stroke-opacity="0.04" stroke-width="2"/></svg>
+          <img src="assets/logo_sira.png" style="position:absolute;left:190px;top:560px;width:700px;" alt="SIRA" />
+          <div class="h1" style="top:900px;font-size:80px">Le droit,<br/><em>en un instant.</em></div>
+          <div style="position:absolute;left:0;right:0;top:1120px;text-align:center;font:600 40px/1 'Open Sans';color:#475569">siramali.com</div>
+          <div style="position:absolute;left:340px;top:1190px;width:400px;padding:28px 0;text-align:center;border-radius:100px;background:#0F172A;color:#FFFFFF;font:700 34px/1 'Open Sans'">S'abonner</div>
+        </div>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        window.__timelines["f06-cta"] = gsap.timeline({ paused: true });
+      </script>
+    </template>
+  </body>
+</html>
