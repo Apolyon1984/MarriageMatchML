@@ -1,0 +1,289 @@
+[a] Nos Tarifs
+[a] Boutique
+[a] Connexion
+[a] S'INSCRIRE
+[span] SIRA — L'Intelligence Souveraine
+[h1] Le Chemin
+[span] de la Justice
+[h1] au Mali.
+[p] Démocratiser l'accès au droit malien et à l'espace OHADA grâce à une expertise technologique sans précédent. Précis, instantané et fiable.
+[a] Commencer
+[span] Voir la vidéo
+[p] Impact National
+[p] 2,000+ Professionnels formés au Mali
+[h2] La librairie juridique
+[h3] Boutique
+[span] SIRA
+[span] Ouvrage en vedette
+[span] Juridique
+[h2] Droit des Personnes
+[p] Par
+[p] Dr Aguissa Ag Mohamed
+[span] 10 000
+[span] FCFA
+[div] Ce premier volume propose un commentaire approfondi des articles 1 à 277 du Code des Personnes et de la Famille du Mali.
+Il analyse les principes fondamentaux de protection de la personne, le nom, le domicile, l’absence, la disparition, l’état civil et la nationalité malienne.
+Conçu pour l’enseignement comme pour la pratique, l’ouvrage confronte le droit écrit aux réalités sociales, coutumières, religieuses et sécuritaires du Mali.
+Description complète
+Qui est reconnu comme personne en droit malien ? Comment établir son identité, son domicile ou sa nationalité ? Que devient juridiquement une personne absente ou disparue ? Comment obtenir ou rectifier un acte d’état civil ?
+Ce premier volume de la collection Droit des Personnes et de la Famille au Mali répond à ces questions à travers un commentaire systématique des articles 1 à 277 du Code des Personnes et de la Famille.
+Dr Aguissa Ag Mohamed examine chaque matière en tenant compte de la Constitution du 22 juillet 2023, de la jurisprudence, des engagements internationaux du Mali et du droit comparé africain. Il confronte également le droit étatique aux règles du droit islamique malékite et aux pratiques coutumières maliennes.
+Une attention particulière est accordée aux difficultés rencontrées dans la pratique : jugements supplétifs, naissances non enregistrées, destruction des registres, déplacements de populations, disparition de personnes en contexte de conflit, apatridie, double nationalité et situation juridique de la diaspora.
+L’ouvrage ne se limite pas à présenter les textes. Il identifie les écarts entre la loi et la pratique, examine les enjeux d’égalité et formule des propositions de réforme adaptées au contexte malien.
+Avec ses synthèses, cas pratiques, tableaux de concordance et index, ce volume constitue un outil de travail pour les praticiens et un support pédagogique pour les étudiants.
+Principales matières traitées
+- La sacralité, la dignité et la protection de la personne humaine
+- La vie privée, le corps humain et la bioéthique
+- Le pluralisme juridique malien
+- Le nom, le prénom et le domicile
+- La situation des personnes déplacées et des populations nomades
+- L’absence et la disparition
+- L’administration des biens de l’absent
+- La déclaration judiciaire de décès
+- L’organisation de l’état civil
+- Les actes de naissance, de mariage et de décès
+- Le jugement supplétif
+- L’état civil consulaire
+- L’attribution et l’acquisition de la nationalité malienne
+- La naturalisation, la perte et le recouvrement de la nationalité
+- L’apatridie et la double nationalité
+Les atouts de l’ouvrage
+- Commentaire des articles 1 à 277 du CPF
+- Intégration de la Constitution malienne de 2023
+- Analyse de la jurisprudence accessible
+- Comparaison avec plusieurs droits africains et le droit français
+- Prise en compte du droit islamique malékite
+- Étude des pratiques coutumières maliennes
+- Développements consacrés aux conséquences du conflit armé
+- Encadrés de synthèse « L’essentiel »
+- Cas pratiques avec éléments de correction
+- Table de concordance entre le CPF de 2011, le Code de 1962 et le Code civil français
+- Index des matières, des articles et de la jurisprudence
+Public concerné
+- Magistrats
+- Avocats
+- Notaires
+- Officiers et agents de l’état civil
+- Greffiers
+- Enseignants et chercheurs
+- Étudiants en droit
+- Administrations publiques
+- Organisations intervenant dans l’accès à l’identité juridique
+- Professionnels travaillant sur les déplacements, les disparitions et l’apatridie
+Citation mise en avant
+« Le droit malien des personnes n’est pas un droit en crise, mais un droit en mouvement. »
+
+Informations éditoriales
+- Auteur : Dr Aguissa Ag Mohamed
+- Qualité : docteur en droit et magistrat
+- Collection : Les Fondamentaux du Droit Malien
+- Série : Droit des Personnes et de la Famille au Mali
+- Volume : 1 sur 6
+- Éditeur : Protranslex Éditions
+- Année : 2026
+- Nombre de pages : 191
+- État du droit : textes en vigueur au 1er janvier 2026
+- Langue : français
+[button] Lire le résumé
+[a] Ouvrir la boutique
+[p] " Loin de remplacer l'expert juridique, Sira a été pensée comme le véritable moteur de sa rapidité et de son efficacité. "
+[p] Dr. Lury NKOUESSOM
+[p] Avocat & CEO de Protranslex
+[span] L'Excellence Malienne
+[h2] Une expertise
+[span] sans frontières.
+[p] Nous nous spécialisons dans l'aide aux professionnels du droit et aux citoyens maliens pour naviguer avec aisance dans la complexité législative. SIRA allie fonctionnalité moderne et expertise juridique intemporelle.
+[span] Découvrir l'univers SIRA
+[span] Secteurs Stratégiques
+[h2] Une expertise
+[span] pan-africaine.
+[p] "De Bamako à Mopti, en passant par l'ensemble de l'espace OHADA, nos bases de données couvrent tous les besoins stratégiques des juridictions africaines."
+[p] 4,500+ articles
+[h3] Droit Pénal
+[p] 1,200+ textes
+[h3] Droit Foncier
+[p] 12 Actes Uniformes
+[h3] Espace OHADA
+[p] CPF 2022
+[h3] Droit de la Famille
+[p] Code de 2017
+[h3] Droit du Travail
+[p] CGI & LPF
+[h3] Droit Fiscal
+[p] Code Minier 2023
+[h3] Droit Minier
+[p] Loi 2019-056
+[h3] Droit Numérique
+[p] Loi 2014
+[h3] Droit Administratif
+[p] Constitution 2023
+[h3] Droit Constitutionnel
+[p] 4,500+ articles
+[h3] Droit Pénal
+[p] 1,200+ textes
+[h3] Droit Foncier
+[p] 12 Actes Uniformes
+[h3] Espace OHADA
+[p] CPF 2022
+[h3] Droit de la Famille
+[p] Code de 2017
+[h3] Droit du Travail
+[p] CGI & LPF
+[h3] Droit Fiscal
+[p] Code Minier 2023
+[h3] Droit Minier
+[p] Loi 2019-056
+[h3] Droit Numérique
+[p] Loi 2014
+[h3] Droit Administratif
+[p] Constitution 2023
+[h3] Droit Constitutionnel
+[p] 4,500+ articles
+[h3] Droit Pénal
+[p] 1,200+ textes
+[h3] Droit Foncier
+[p] 12 Actes Uniformes
+[h3] Espace OHADA
+[p] CPF 2022
+[h3] Droit de la Famille
+[p] Code de 2017
+[h3] Droit du Travail
+[p] CGI & LPF
+[h3] Droit Fiscal
+[p] Code Minier 2023
+[h3] Droit Minier
+[p] Loi 2019-056
+[h3] Droit Numérique
+[p] Loi 2014
+[h3] Droit Administratif
+[p] Constitution 2023
+[h3] Droit Constitutionnel
+[p] Textes indexés
+[p] Décisions de justice (CCJA, Cour Suprême du Mali, etc.)
+[p] Utilisateurs actifs
+[span] Méthodologie SIRA
+[h2] Une démarche
+[span] transparente.
+[h3] Identification du domaine
+[p] SIRA cible précisément les textes applicables à votre situation.
+[h3] Analyse Juridique
+[p] Une intelligence souveraine analyse les faits et le droit malien.
+[h3] Solution Concrète
+[p] Réponse détaillée, modèles d'actes et stratégie de défense.
+[p] Une IA conçue
+[p] au Mali pour
+[p] le Mali.
+[p] Souveraineté Numérique
+[h3] SIRA
+[p] En ligne
+[div] Quels sont les droits d'un employé en cas de licenciement économique au Mali ?
+[div] Selon la section 6 du Code du Travail (Loi n°92-020), en cas de licenciement pour motif économique, l'employé a droit à :
+
+1. Une indemnité de licenciement (basée sur l'ancienneté)
+2. Un préavis (ou indemnité compensatrice)
+3. Le paiement des droits acquis (congés payés, etc.)
+4. Une priorité de réembauche pendant 1 an.
+
+Souhaitez-vous que je rédige un modèle de lettre de demande de droits ?
+[div] Saisissez votre message...
+[span] Expérience Immersive
+[span] Une IA qui parle
+[span] votre langue.
+[p] SIRA ne se contente pas de citer des textes. Elle analyse votre situation spécifique, détecte les risques et vous propose des solutions concrètes adaptées à la réalité malienne.
+[span] Analyse de fichiers
+[span] Jurisprudence locale
+[span] Rédaction d'actes
+[span] Conseils pratiques
+[div] Investissez en votre Justice
+[span] L'excellence
+[span] accessible.
+[p] Tarification transparente adaptée aux citoyens et aux cabinets du Mali.
+[span] Mensuel
+[span] Annuel
+[span] -20% Prestige
+[h3] Découverte
+[span] 6 000
+[span] FCFA
+[p] par mois
+[p] Étudiants en droit, jeunes diplômés, citoyens
+[span] 80 Crédits
+[span] Recherche instantanée dans la législation malienne
+[span] Accès au droit OHADA (Actes Uniformes)
+[span] Consultation du corpus de 100+ textes officiels
+[span] Réponses sourcées avec références aux articles
+[span] Explication simplifiée des textes juridiques
+[span] Accès web et mobile 24h/24
+[span] Rédaction d'actes et conclusions
+[span] Analyse et stratégie juridique
+[a] Choisir Découverte
+[div] RECOMMANDÉ
+[h3] Professionnel
+[span] 25 000
+[span] FCFA
+[p] par mois
+[p] Avocats, notaires, magistrats, juristes
+[span] 200 crédits / mois (100 Questions)
+[span] 1 utilisateur inclus
+[span] Tout Découverte, plus :
+[span] Rédaction de conclusions et mémoires juridiques
+[span] Rédaction assistée d'actes (requêtes, assignations, PV...)
+[span] Élaboration de stratégies contentieuses et consultatives
+[span] Analyse comparative de textes et de jurisprudence
+[span] Recherche croisée droit malien × OHADA × traités
+[span] Corpus intégral : codes, lois, décrets, actes uniformes
+[span] Synthèse et résumé de documents juridiques
+[span] Mises à jour continues du corpus législatif
+[a] Choisir Professionnel
+[div] PREMIUM
+[h3] Institution
+[span] SUR DEVIS
+[p] Déploiement institutionnel sur mesure
+[p] Utilisateurs illimités
+[p] Ministères, banques, ONG, grandes entreprises
+[span] Utilisateurs illimités
+[span] Tout Professionnel, plus :
+[span] Corpus personnalisé avec vos documents internes
+[span] Intégration API dans votre système d'information
+[span] Formation complète de votre équipe juridique
+[span] Gestionnaire de compte dédié
+[span] Support premium avec SLA garanti
+[span] Rapports d'utilisation et d'impact mensuels
+[a] Demander un devis
+[h2] Témoignages
+[h3] Ce que disent nos
+[span] utilisateurs
+[p] SIRA a révolutionné ma façon de travailler. La recherche dans le Code des Personnes et de la Famille et les actes OHADA est instantanée. C'est un gain de temps inestimable pour notre cabinet.
+[h4] Me. Oumar Traoré
+[p] Utilisateur SIRA
+[p] Grâce à SIRA, j'ai pu comprendre facilement les démarches pour créer ma petite entreprise. L'explication des textes de loi est claire et accessible, même pour quelqu'un qui n'a pas fait de droit.
+[h4] Fatoumata Diallo
+[p] Utilisateur SIRA
+[p] La fonction de rédaction assistée m'a bluffée. J'ai pu générer un projet de contrat de bail conforme au droit foncier malien en quelques minutes. Je recommande vivement !
+[h4] Amina Touré
+[p] Utilisateur SIRA
+[h2] Prêt à sécuriser
+[span] votre futur ?
+[p] SIRA : L'excellence technologique pour la justice au Mali. Propre, puissant, souverain.
+[a] Commencer l'expérience
+[p] Votre assistant juridique propulsé par l'Intelligence Artificielle. Le premier outil complet et actualisé pour les professionnels du droit au Mali, OHADA et espace UEMOA.
+[h3] Liens Rapides
+[a] Assistant IA (SIRA)
+[a] Modèles d'Actes
+[h3] Domaines du droit
+[a] Droit Civil & Famille Mali
+[a] Droit du Travail Malien
+[a] Actes Uniformes OHADA
+[a] Droit Pénal du Mali
+[a] Droit Foncier
+[h3] Nous Contacter
+[strong] PROTRANSLEX SARL
+[span] Sébénikoro, en face de Myra Market
+[span] BP : E 3253 Bamako, MALI
+[span] (+223) 93 48 88 80
+[span] (+223) 73 72 67 36
+[span] client@siramali.com
+[span] www.siramali.com
+[p] SIRA Assistant Juridique. Tous droits réservés.
+[a] Conditions d'utilisation
+[a] Politique de confidentialité
+[a] Mentions légales

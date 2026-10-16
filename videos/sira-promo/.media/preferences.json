@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "tiktok-reels-shorts",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:14:00.553Z"
+    },
+    "aspect": {
+      "value": "1080x1920",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:14:00.611Z"
+    },
+    "language": {
+      "value": "fr",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:14:00.664Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:14:00.722Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:14:00.780Z"
+    },
+    "voice": {
+      "value": "elevenlabs:mkICqLRQ2Z3C1DGIKjC7",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:14:00.843Z"
+    },
+    "style_preset.product-launch-video": {
+      "value": "blue-professional",
+      "confirmed_in": [
+        "sira-promo"
+      ],
+      "updated_at": "2026-10-16T01:17:42.396Z"
+    }
+  },
+  "sightings": {}
+}

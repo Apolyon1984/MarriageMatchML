@@ -10,7 +10,7 @@ audience: professionnels du droit (avocats, magistrats, juristes)
 length: 30s
 angle: probleme-solution
 narration: yes
-voice: "française, masculine, posée et grave (ElevenLabs)"
+voice: "elevenlabs:mkICqLRQ2Z3C1DGIKjC7 (Lury's voice, voix clonée de l'utilisateur)"
 ---
 
 ## Intent
@@ -25,7 +25,7 @@ Fil narratif : 0-6 s, un juriste isométrique enseveli sous des piles de codes e
 
 ## Customizations
 
-- Voix off ElevenLabs, française, masculine, posée et grave (variable `ELEVENLABS_API_KEY`).
+- Voix off ElevenLabs : voix clonée de l'utilisateur, « Lury's voice » (ID mkICqLRQ2Z3C1DGIKjC7), ton posé et grave.
 - Sous-titres incrustés et synchronisés sur la voix.
 - Chaque chiffre monte en compteur dans sa propre scène isométrique (environ 2 s chacun) : 20+ domaines du droit, 5000+ textes de loi, 5000+ jurisprudences.
 - Zones de sécurité haut et bas libres (interfaces TikTok et Instagram).
@@ -33,7 +33,7 @@ Fil narratif : 0-6 s, un juriste isométrique enseveli sous des piles de codes e
 
 ## Notes
 
-Script de la voix off (environ 65 mots, proposé, en attente de validation) :
+Script de la voix off (environ 65 mots, validé par l'utilisateur, à lire tel quel) :
 
 > Des heures à chercher le bon article ? Le bon arrêt ?
 > Avec SIRA, l'assistant juridique intelligent, la réponse arrive en quelques secondes.
